@@ -40,12 +40,17 @@ Main.css
   border: none 1x;
 }
 
+.m-profilePicture {
+  width: 70px;
+  height: 70px;
+}
+
 .m-firstLine {
   text-align: center;
 }
 
 .m-headerFont {
-  font-size: 50px;
+  font-size: 41px;
 }
 
 .m-secondLine {
