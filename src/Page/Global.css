@@ -1,0 +1,166 @@
+/*.container {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+}
+*/
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bBorder {
+  border-bottom: solid 1px;
+}
+/*
+Main.css
+*/
+
+.m-container {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.m-wrapper {
+  border: none 1x;
+}
+
+.m-firstLine {
+  text-align: center;
+}
+
+.m-headerFont {
+  font-size: 50px;
+}
+
+.m-secondLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.m-spaceRight {
+  padding-right: 15px;
+}
+
+.m-spaceLeft {
+  padding-left: 15px;
+}
+
+.m-menuFont {
+  font-size: 35px;
+  border:none;
+  outline:none;
+  text-decoration:none;
+  color:inherit;
+}
+
+.menu-bBorder {
+  border-bottom: solid 1px;
+}
+
+.m-menuFont:hover {
+  background-color: gray;
+}
+
+/*
+Projects.css
+*/
+
+.p-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.p-wrapper {
+  border: none 2px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.p-innerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.p-projectContainer {
+  margin: 5px;
+}
+
+.p-nameFont {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.p-image {
+  max-width: 600px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.p-infoBorder {
+  border: none 2px;  
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.p-infoLinks {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.p-links {
+  width: 45px;
+  height: 45px;
+}
+
+.p-divideIcons {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-infoLine {
+  word-wrap: break-word;
+  margin: 3px;
+}
+
+/*
+Contact.css
+*/
+
+.c-container {
+  text-align: center;
+}
+
+/*
+About.css
+*/
+
+.a-container {
+  text-align: center;
+}
