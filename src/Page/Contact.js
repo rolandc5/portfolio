@@ -7,9 +7,13 @@ export default class Contact extends Component {
       <div class="">
         <div>
           <div class="c-container">
-            Facebook
-            Github
-            Linkedin
+            <div className="c-linkCol">
+            <a href="https://www.facebook.com/roland.canuto"><img className="c-image" src={ require('./facebook.png') }/></a>
+            <div className="c-space"/>
+            <a href="https://github.com/rolandc5"><img className="c-image" src={ require('./github.jpg') } /></a>
+            <div className="c-space"/>
+            <a href="https://www.linkedin.com/in/roland-canuto-43437941/" ><img className="c-image" src={ require('./linkedin.png') } /></a>
+            </div>
           </div>
         </div>
       </div>
