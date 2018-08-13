@@ -8,35 +8,55 @@ export default class Projects extends Component {
       file: [
         //{name: '', site: '', code: '', picture: '', info: ''},
         {name: 'Remember Me Not', site: 'https://pass-client.herokuapp.com/', code: 'https://github.com/rolandc5/password-client/tree/modalBranch', picture: "https://twistedsifter.files.wordpress.com/2014/10/chin-fur-makes-cat-look-surprised-banye-china-5.jpg?w=800&h=533", info: 'This project was created for the convience of users that don\'t remember their passwords'},
+          {name: 'Remember Me Not', site: 'https://pass-client.herokuapp.com/', code: 'https://github.com/rolandc5/password-client/tree/modalBranch', picture: "https://twistedsifter.files.wordpress.com/2014/10/chin-fur-makes-cat-look-surprised-banye-china-5.jpg?w=800&h=533", info: 'This project was created for the convience of users that don\'t remember their passwords'},
       ]
     }
   }
   render() {
-    const value = this.state.file;
+    const file = this.state.file;
     return (
       <div className="p-container">
         <div className="p-wrapper">
           <div className="p-innerContainer">
-            <div className="p-column">
-              <div className="p-nameFont">{ value[0].name }</div>
-              <img className="p-image" src={ value[0].picture }/>
-              <div class="p-infoBorder">
-                <div class="p-infoLinks">
-                  <a href={ value[0].site }> <img class="p-links" alt="link" src={require("./link.png")}/> </a>
-                  <div class="p-divideIcons"/>
-                  <a href={ value[0].code }> <img class="p-links" alt="link" src={require("./code.png")}/> </a>
-                </div>
-                <div class="p-infoLine">
-                  { value[0].info }
-                </div>
-              </div>
-            </div>
+              { file.map((value, i) => {
+                return (
+                  <div key={ i }>
+                    <div className="p-column">
+                      <div className="p-nameFont">{ value.name }</div>
+                      <img className="p-image" src={ value.picture }/>
+                    </div>
+                    <div class="p-infoBorder">
+                      <div class="p-infoLinks">
+                        <a href={ value.site }> <img class="p-links" alt="link" src={require("./link.png")}/> </a>
+                        <div class="p-divideIcons"/>
+                        <a href={ value.code }> <img class="p-links" alt="link" src={require("./code.png")}/> </a>
+                      </div>
+                      <div class="p-infoLine">{ value.info }</div>
+                    </div>
+                  </div>
+                )
+              })}
           </div>
         </div>
       </div>
     )
   }
 }
+/*
+<div key={i}>
+  <div className="p-column">
+    <div className="p-nameFont">{ value.name }</div>
+    <img className="p-image" src={ value.picture }/>
+    <div class="p-infoBorder">
+      <div class="p-infoLinks">
+        <a href={ value.site }> <img class="p-links" alt="link" src={require("./link.png")}/> </a>
+        <div class="p-divideIcons"/>
+        <a href={ value.code }> <img class="p-links" alt="link" src={require("./code.png")}/> </a>
+      </div>
+      <div class="p-infoLine">{ value.info }</div>
+    </div>
+  </div>
+*/
 
 /*
             <div class="menu-container">

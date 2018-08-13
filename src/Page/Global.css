@@ -100,6 +100,7 @@ Projects.css
 .p-innerContainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .p-column {
