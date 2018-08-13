@@ -9,7 +9,7 @@ export default class Main extends Component {
           <div class="m-wrapper">
             <div>
               <div class="m-firstLine">
-                <div><img class="m-profilePicture" img src={ require("./picture.png") }/></div>
+                <div><img class="m-profilePicture" alt="this is an avatar" src={ require("./picture.png") }/></div>
                 <header class="m-headerFont">Roland Canuto</header>
               </div>
               <div class="m-secondLine">

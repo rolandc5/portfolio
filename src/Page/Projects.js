@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Projects extends Component {
   constructor() {
@@ -23,19 +22,20 @@ export default class Projects extends Component {
                   <div key={ i }>
                     <div className="p-column">
                       <div className="p-nameFont">{ value.name }</div>
-                      <img className="p-image" src={ value.picture }/>
-                    </div>
-                    <div class="p-infoBorder">
-                      <div class="p-infoLinks">
-                        <a href={ value.site }> <img class="p-links" alt="link" src={require("./link.png")}/> </a>
-                        <div class="p-divideIcons"/>
-                        <a href={ value.code }> <img class="p-links" alt="link" src={require("./code.png")}/> </a>
+                      <img className="p-image" alt="this is the project" src={ value.picture }/>
+                      <div class="p-infoBorder">
+                        <div class="p-infoLinks">
+                          <a href={ value.site }> <img class="p-links" alt="link" src={require("./link.png")}/> </a>
+                          <div class="p-divideIcons"/>
+                          <a href={ value.code }> <img class="p-links" alt="link" src={require("./code.png")}/> </a>
+                        </div>
+                        <div class="p-infoLine">{ value.info }</div>
                       </div>
-                      <div class="p-infoLine">{ value.info }</div>
                     </div>
                   </div>
                 )
               })}
+            <div style={{ paddingBottom: "40px"}}/>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class About extends Component {
   render() {
@@ -8,8 +7,10 @@ export default class About extends Component {
         <div>
           <div class="p-container">
             <div className="a-wrapper">
-              <div className="a-font">
-              { 'I\'m a 24 year old programmer from Tracy California. I\'m a problem solver, a thinker, a DIY kind of guy (also works great in teams), and also very creative.' }
+              <div className="a-centered">
+                <div className="a-left">
+                  { 'I\'m a 24 year old programmer from Tracy California. ' }
+                </div>
               </div>
             </div>
           </div>

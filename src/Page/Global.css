@@ -165,11 +165,20 @@ About.css
 
 .a-wrapper {
   word-wrap: break-word;
-  width: 700px;
+  max-width: 800px;
+  width: 80%;
+}
+
+.a-centered {
+  text-align: center;
+}
+
+.a-left {
+  text-align: left;
+  display: inline-block;
 }
 
 .a-font {
-  display: flex;
   font-weight: bold;
   font-size: 18px;
 }
