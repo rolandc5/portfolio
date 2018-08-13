@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
   render() {
     return (
-      <div class="">
+      <div className="">
         <div>
-          <div class="p-container">
+          <div className="p-container">
             <div className="c-linkCol">
             <a href="https://www.facebook.com/roland.canuto"><img className="c-image" alt="facebook" src={ require('./facebook.png') }/></a>
             <div className="c-space"/>
