@@ -1,0 +1,265 @@
+
+@media only screen and (max-width: 1200px) {
+  /*
+  Project.css
+  */
+  .p-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p-nameFont {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .p-byFont {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .p-carouselC {
+      display: flex;
+      justify-content: center;
+  }
+
+  .p-carousel {
+    max-width: 600px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  .p-image {
+    max-width: 600px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    border-radius: 1%;
+    box-shadow: none;
+  }
+
+  .p-spaceMiddle {
+    width: 0px;
+  }
+
+  .p-infoBorder {
+    margin: 0px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: column;
+  }
+
+  .p-spaceTop {
+    height: 25px;
+  }
+
+  .p-infoLine {
+    word-wrap: break-word;
+    font-size: 15px;
+    margin: 3px;
+  }
+
+  .p-infoLinks {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .p-links {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .m-menuFont {
+    font-size: 30px;
+    font-weight: bold;
+    outline:none;
+    text-decoration:none;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+
+  .p-carousel {
+    max-width: 540px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+
+  /*
+  Menu.css
+  */
+
+  .m-container {
+    margin: 0px;
+  }
+
+  .m-wrapper {
+    margin: 5px;
+  }
+
+  .m-mobileHeight {
+    height: 20px;
+  }
+
+  .m-firstLine {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .m-profilePicture {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+  }
+
+  .m-avatarSpace {
+    height: 5px;
+  }
+
+  .m-headerFont {
+    font-size: 16px;
+  }
+
+  .m-spaceHeight {
+    height: 10px;
+  }
+
+  .m-secondLine {
+    justify-content: center;
+    display: flex;
+  }
+
+  .m-space {
+    width: 30px;
+  }
+
+  .m-menuFont {
+    font-size: 20px;
+    font-weight: bold;
+    outline:none;
+    text-decoration:none;
+    color: black;
+  }
+
+  .m-menuFont:hover {
+    color: gray;
+  }
+
+  .m-mobileBottomSpace {
+    height: 10px;
+  }
+
+  /*
+  Contact.css
+  */
+
+  .c-container {
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .c-linkCol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .c-image {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+  }
+
+  .c-space {
+    width: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .p-carousel {
+    max-width: 480px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  .p-carousel {
+    max-width: 384px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+
+  .p-carousel {
+    width: 359px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 359px;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .p-carousel {
+    max-width: 375px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .p-carousel {
+    max-width: 320px;
+    height: auto;
+  }
+
+  .p-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}
