@@ -18,13 +18,13 @@ export default class Main extends Component {
               <div>
                 <div className="m-spaceHeight"/>
                 <div className="m-secondLine">
-                  <span><Link to="/about" className="m-menuFont">about</Link></span>
+                  <span><Link to="/1/about" className="m-menuFont">about</Link></span>
                   <span className="m-space"/>
-                  <span><Link to="/project" className="m-menuFont">projects</Link></span>
+                  <span><Link to="/1/project" className="m-menuFont">projects</Link></span>
                   <span className="m-space"/>
                   <span className="m-menuFont">blog</span>
                   <span className="m-space"/>
-                  <span><Link to="/contact" className=" m-menuFont">contact</Link></span>
+                  <span><Link to="/1/contact" className=" m-menuFont">contact</Link></span>
                 </div>
               </div>
             </div>

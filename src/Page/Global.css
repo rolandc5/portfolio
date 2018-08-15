@@ -94,83 +94,109 @@ Projects.css
 */
 
 .p-container {
+  margin: 0;
+  padding: 0;
+}
+
+.p-wrapper {
   display: flex;
   justify-content: center;
 }
 
-
-.p-innerContainer {
+.p-projectContainer {
   display: flex;
   flex-direction: column;
 }
 
-.p-row {
+.p-titleFont {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.p-projectAlign {
   display: flex;
   flex-direction: row;
 }
 
-.p-nameFont {
-  font-size: 30px;
-}
-
-.p-carousel {
-  max-width: 450px;
-  width: 100%;
-  max-height: 300px;
-  height: 100%;
+.p-leftB {
+  width: 525px;
+  height: 345px;
+  border-radius: 10px;
   box-shadow: 2px 5px 10px grey;
 }
 
-.p-image {
-  max-width: 100%;
-  height: 300px;
+.p-pImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .p-spaceMiddle {
-  width: 60px;
+  width: 25px;
+  height: 0px;
 }
 
-.p-infoBorder {
-  max-width: 550px;
-  display: flex;
-  word-wrap: break-word;
-  flex-direction: column;
+.p-rightB {
+  border: none 0.1px;
+  width: 650px;
+  height: auto;
 }
 
-.p-spaceTop {
-  height: 55px;
-}
-
-.p-infoLine {
+.p-infoFont {
   font-size: 18px;
-  display: inline;
-  text-align: left;
 }
 
-.p-spaceLine {
+.spaceB {
   height: 10px;
 }
 
+.spaceBottom {
+  height: 100px;
+}
 
-.p-infoLinks {
-  margin: 10px;
+.p-infoBold {
+  font-weight: bold;
+}
+
+.p-buttonPosition {
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
 }
 
-.p-links {
-  width: 45px;
-  height: 45px;
+.p-button {
+  border: 2px none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 
-.p-divideIcons {
-  width: 30px;
+.p-buttonColorL {
+  color: white;
+  background-color: darkblue;
 }
 
-.p-bottomSpace {
-   height: 40px;
+.p-buttonColorL:hover {
+  background-color: lightblue;
 }
+
+.p-spaceMiddle {
+  width: 20px;
+  height: 0;
+}
+
+.p-buttonColorC {
+  color: white;
+  background-color: green;
+}
+
+.p-buttonColorC:hover {
+  background-color: lightgreen;
+}
+
 
 /*
 About.css
@@ -197,6 +223,7 @@ About.css
 
 .a-titleFont {
   font-size: 30px;
+  font-weight: bold;
 }
 
 .a-design {
@@ -227,12 +254,14 @@ About.css
 
 .a-myCarousel {
   height: 300px;
+  border-radius: 10px;
   box-shadow: 2px 5px 10px gray;
 }
 
 .a-extrasP {
   width: 500px;
-  height: 300px;
+  height: 301px;
+  border-radius: 10px;
 }
 
 .a-spaceBottom {
@@ -241,7 +270,12 @@ About.css
 }
 
 .a-secondLine {
+  display: flex;
+  flex-direction: row;
+}
 
+.a-skills {
+  width: 100%;
 }
 
 .a-skillsCol {
@@ -268,6 +302,14 @@ About.css
   width: 80%;
 }
 
+.a-html {
+  width: 78%;
+}
+
+.a-css {
+  width: 78%;
+}
+
 .a-react {
   width: 75%;
 }
@@ -288,14 +330,94 @@ About.css
   width: 10%;
 }
 
+.a-skillsJobs {
+  border: solid 2px;
+  width: 50%;
+}
+
+.a-jobsCarousel {
+  width: 100px;
+  height: 100%;
+}
+
+.a-box {
+  border: solid 0.1px;
+  width: 100px;
+  height: 100px;
+}
 
 /*
 Contact.css
 */
 
 .c-container {
+  margin: 0;
+  padding: 0;
+}
+
+.c-wrapper {
+
+}
+
+.c-innerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.c-socialContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-questionsBorder {
+  height: 100%;
+  width: 700px;
+}
+
+.c-titleFont {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.c-designLine {
+  border-bottom: solid 3px;
+  width: 100%;
+  height: 0;
+}
+
+.c-topForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-inputName {
+  border: solid 2px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
   text-align: center;
-  padding-top: 25px;
+}
+
+.c-inputQuestion {
+  border: solid 2px;
+  padding: 100px;
+  height: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.c-spaceMiddle {
+  width: 50px;
+}
+
+.c-socialBorder {
+  height: 100%;
+  width: 500px;
+}
+
+.c-socialFont {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .c-linkCol {
@@ -305,8 +427,8 @@ Contact.css
 }
 
 .c-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
 }
 

@@ -9,10 +9,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route path="/" component={ Pages.Main }/>
-        <Route path="/about" component={ Pages.About }/>
-        <Route path="/project" component={ Pages.Projects }/>
-        <Route path="/contact" component={ Pages.Contact }/>
+        <Route exact path="/" component={ Pages.Loading }/>
+        <Route path="/1/" component={ Pages.Main }/>
+        <Route path="/1/about" component={ Pages.About }/>
+        <Route path="/1/project" component={ Pages.Projects }/>
+        <Route path="/1/contact" component={ Pages.Contact }/>
       </div>
     );
   }

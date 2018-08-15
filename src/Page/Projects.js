@@ -29,49 +29,54 @@ export default class Projects extends Component {
       autoplaySpeed: Math.random() * (8000 - 6000) + 6000,
     };
     return (
-      <div className="p-container">
-        <div className="p-wrapper">
-          <div className="p-innerContainer">
-              { file.map((value, i) => {
-                return (
-                  <div key={ i }>
-                    <div className="p-row">
-                      <div>
-                        <div className="p-nameFont">{ value.name }</div>
-                        <div className="p-byFont"> By Roland Canuto </div>
-                        <div className="p-carouselC">
-                          <Slider className="p-carousel" {...settings}>
-                            { value.picture.map((picture, i) => {
-                              settings.autoplaySpeed = Math.random() * (8000 - 6000) + 6000;
-                                return (
-                                  <div key={i}>
-                                    <img className="p-image" alt="pictures not here" src={ picture }/>
-                                  </div>
-                                )
-                            })}
-                          </Slider>
+      <div>
+        <div className="p-container">
+          <div className="p-wrapper">
+            <div className="p-innerContainer">
+              <div className="p-projectContainer">
+                { file.map((value, i) => {
+                    settings.autoplaySpeed = Math.random() * (8000 - 6000) + 6000;
+                    return (
+                      <div key={ i }>
+                        <span className="p-titleFont"> { value.name } </span>
+                        <div className="p-projectAlign">
+                          <div className="p-leftB">
+                            <Slider {...settings}>
+                              { value.picture.map((picture, i) => {
+                                  return (
+                                    <div key= { i }>
+                                      <img className="p-pImage" alt="this is supposed to be ... but can't be loaded" src={ picture }/>
+                                    </div>
+                                  )
+                              }) }
+                            </Slider>
+                          </div>
+                          <div className="p-spaceMiddle"/>
+                          <div className="p-rightB">
+                            <div className="p-infoFont">
+                              <span>{ value.info }</span>
+                              <br/>
+                              <div className="spaceB"/>
+                              <span className="p-infoBold"> Responsibilities: </span><span> Backend, Frontend </span>
+                              <br/>
+                              <span className="p-infoBold"> Languages: </span><span> JavaScript </span>
+                              <br/>
+                              <span className="p-infoBold">  Framework: </span><span> ReactJS, ExpressJS </span>
+                            </div>
+                            <div className="spaceB"/>
+                            <div className="p-buttonPosition">
+                              <a className="p-button p-buttonColorL" target="_blank" rel="noopener noreferrer" href={ value.site }><div> Link </div></a>
+                              <div className="p-spaceMiddle"/>
+                              <a className="p-button p-buttonColorC" target="_blank" rel="noopener noreferrer" href={ value.code }><div> Code </div></a>
+                            </div>
+                          </div>
                         </div>
+                        <div className="spaceBottom"/>
                       </div>
-                      <div className="p-spaceMiddle"/>
-                      <div class="p-infoBorder">
-                        <div className="p-spaceTop"/>
-                        <div className="p-infoLine">{ value.info }</div>
-                        <div className="p-spaceLine"/>
-                        <div className="p-infoLine "><span style={{ fontWeight: "bold"}}>Role:</span> Front-end, Back-end developer </div>
-                        <div className="p-infoLine "><span style={{ fontWeight: "bold"}}>Languages:</span> Javascript </div>
-                        <div className="p-infoLine "><span style={{ fontWeight: "bold"}}>Frameworks/Libs:</span> React, NodeJS, MongoDB, </div>
-                        <div className="p-infoLinks">
-                          <a target="_blank" rel="noopener noreferrer" href={ value.site }> <img className="p-links" alt="link" src={require("./link.png")}/> </a>
-                          <div className="p-divideIcons"/>
-                          <a target="_blank" rel="noopener noreferrer" href={ value.code }> <img className="p-links" alt="link" src={require("./code.png")}/> </a>
-                        </div>
-                      </div>
-                    </div>
-                  <div className="p-bottomSpace"/>
-                  </div>
-                )
-              })}
-            <div style={{ paddingBottom: "30px"}}/>
+                    )
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
