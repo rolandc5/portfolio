@@ -89,12 +89,12 @@ export default class Main extends Component {
 
             <div>
               <div className="m-linkContainer">
-                <div className="g-f m-linkFont">
-                  <a href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
+                <div className="">
+                  <a className="g-f m-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
                 </div>
                 <div style={{ width: 50 }}/>
-                <div className="g-f m-linkFont">
-                  <a href="https://github.com/rolandc5">github</a>
+                <div className="t">
+                  <a className="g-f m-linkFont" href="https://github.com/rolandc5">github</a>
                 </div>
               <div style={{ height: 10 }}/>
               </div>
