@@ -237,7 +237,7 @@ About.css
 .a-container {
   margin: 0;
   padding: 0;
-  background-color: #b1ddd5;
+  background-color: #c4e8dc;
 }
 
 .a-wrapper {
@@ -265,7 +265,6 @@ About.css
 .a-headerTFont {
   font-size: 24px;
 }
-
 
 .a-introSContainer {
   max-width: 850px;
@@ -332,58 +331,6 @@ About.css
   border-radius: 10px;
 }
 
-
-/*
-
-.a-Bar {
-  border: 2px solid green;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 100%;
-  background-color: green;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-
-.a-js {
-  width: 80%;
-}
-
-.a-Express {
-  width: 80%;
-}
-
-.a-html {
-  width: 78%;
-}
-
-.a-css {
-  width: 78%;
-}
-
-.a-react {
-  width: 75%;
-}
-
-.a-reactN {
-  width: 60%;
-}
-
-.a-cpp {
-  width: 35%;
-}
-
-.a-c {
-  width: 25%;
-}
-
-.a-Python {
-  width: 10%;
-}
-*/
-
 /*
 Contact.css
 */
@@ -391,6 +338,7 @@ Contact.css
 .c-container {
   margin: 0;
   padding: 0;
+  background-color: #8cdcb1;
 }
 
 .c-wrapper {
@@ -401,6 +349,21 @@ Contact.css
   text-align: center;
 }
 
-.c-blogPost {
-  font-size: 30px;
+
+.c-introOuterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.c-introContainer {
+  width: 600px;
+}
+
+.c-headerFont {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.c-headerTFont {
+  font-size: 24px;
 }

@@ -74,10 +74,30 @@ export default class About extends Component {
                     <div style={{ height: 25 }}/>
 
 
+
                 </div>
               </div>
               <div style={{ height: 150 }}/>
             </div>
+
+              <div>
+                <div className="a-introOuterContainer">
+                  <div className="a-introContainer">
+                    <div className="g-f a-headerFont">
+                      Reach out to me!
+                    </div>
+                    <div style={{ height: 25 }}/>
+                    <div className="g-f a-headerTFont">
+                      { "rolandcanuto@outlook.com" }
+                      <br/>
+                      <div style={{ height: 10 }}/>
+                      { "(510)331-7719" }
+                    </div>
+                  </div>
+                </div>
+                <div style={{ height: 100 }}/>
+              </div>
+
 
 
 

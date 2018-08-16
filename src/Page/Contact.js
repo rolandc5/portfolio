@@ -6,14 +6,21 @@ export default class Contact extends Component {
       <div className="c-container">
         <div className="c-wrapper">
           <div className="c-innerContainer">
-          
-            <div style={{ height: 200 }}>
-            <div className="c-blogPostContainer">
 
-                <div className="g-f c-blogPost">
-                Blog goes here
+            <div>
+              <div style={{ height: 150 }}/>
+              <div className="c-introOuterContainer">
+                <div className="c-introContainer">
+                  <div className="g-f c-headerFont">
+                    Learn more in my blog!
+                  </div>
+                  <div style={{ height: 25 }}/>
+                  <div className="g-f c-headerTFont">
+                    { "Unfortunately this section is still under construction."}
+                  </div>
                 </div>
               </div>
+              <div style={{ height: 150 }}/>
             </div>
 
           </div>
@@ -22,37 +29,3 @@ export default class Contact extends Component {
     )
   }
 }
-
-/*
-<div>
-  <div className="c-socialFont">
-    Lets Connect!
-  </div>
-  <div className="c-linkCol">
-    <a href="https://www.facebook.com/roland.canuto"><img className="c-image" alt="facebook" src={ require('./facebook.png') }/></a>
-    <div className="c-space"/>
-    <a href="https://github.com/rolandc5"><img className="c-image" alt="github" src={ require('./github.jpg') } /></a>
-    <div className="c-space"/>
-    <a href="https://www.linkedin.com/in/roland-canuto-43437941/" ><img className="c-image" alt="linkedin" src={ require('./linkedin.png') } /></a>
-  </div>
-</div>*
-
-<div className="c-questionsBorder">
-  <div>
-    <span className="c-titleFont">Questions?</span><div className="c-designLine"/>
-    <div style={{ height: 10 }}/>
-  </div>
-  <div className="c-inputForm">
-    <div className="c-topForm">
-      <div className="c-inputName"> Name </div>
-      <div style={{ width: 50 }}/>
-      <div className="c-inputName"> Email </div>
-    </div>
-    <div style={{ height: 10 }}/>
-    <div className="c-bottomForm">
-      <div className="c-inputQuestion"> Question</div>
-    </div>
-  </div>
-</div>
-<div className="c-spaceMiddle"/>
-*/
