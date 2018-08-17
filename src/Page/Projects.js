@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Popup from "reactjs-popup";
 import './Global.css';
 
 
@@ -7,12 +8,12 @@ export default class Projects extends Component {
     super();
     this.state = {
       file: [
-        //{name: '', site: '', code: '', picture: '', info: ''}
-        { picture: require('./website2.png'), title: "This is stub information", info:  "This is stub information This is stub information This is stub information This is stub information This is stub information This is stub informationThis is stub information" },
+        { picture: require('./website2.png')},
         { picture: require('./website3.png') },
         { picture: require('./website4.png') },
       ],
       number: 0,
+      open: false,
     }
     this.handleButtonPress = this.handleButtonPress.bind(this);
   }
@@ -20,21 +21,25 @@ export default class Projects extends Component {
   handleButtonPress(e) {
     let number = this.state.number;
     const name = e.target.name;
-    if(name === 'back') {
-      if (this.state.number === 0 ) {
-        return;
-      }
-      number--
-      this.setState({ number });
-    }
-    if (this.state.file.length - 1 === number) {
+    if (this.state.file.length === number + 1) {
+      this.setState({ number: 0 });
       return;
     }
     if(name === 'next') {
       number++
       this.setState({ number });
+      return;
     }
   }
+
+  openModal = () => {
+  this.setState({ open: true });
+  };
+
+  closeModal = () => {
+    this.setState({ open: false });
+  };
+
 
   render() {
     return (
@@ -72,25 +77,26 @@ export default class Projects extends Component {
                             <div className="p-button p-colorG"/>
                           </div>
                         </div>
-                              { this.state.number === 0 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn" src={ this.state.file[this.state.number].picture }/></div>: null }
-                              { this.state.number === 1 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn" src={ this.state.file[this.state.number].picture }/></div>: null }
-                              { this.state.number === 2 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn" src={ this.state.file[this.state.number].picture }/></div>: null }
+                          { this.state.file.map((value, i) => {
+                             return (
+                               <div>
+                                { this.state.number === i ? <div className="p-hContainer"><button className="p-buttonModal" onClick={ this.openModal }><img className="p-projectImage animated fadeIn" src={ value.picture }/></button></div>: null }
+                               </div>
+                             )
+                          })}
                       </div>
                   </div>
                 </div>
               </div>
               <div style={{ height: 20 }}/>
             </div>
-
             <div>
               <div className="p-changeProjectB">
-                <button className="g-f p-introSLine" name="back" onClick={ this.handleButtonPress }> Back </button>
-                <div style={{ width: 50 }}/>
                 <button className="g-f p-introSLine" name="next" onClick={ this.handleButtonPress }> Next </button>
               </div>
             <div style={{ height: 100 }}/>
             </div>
-
+            
           </div>
         </div>
       </div>

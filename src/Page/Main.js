@@ -19,7 +19,7 @@ export default class Main extends Component {
     }
 
   componentDidMount() {
-    this.setState({ about: 1, projects: 0, blog: 0, contact: 0 },  () => {
+    this.setState({ about: 0, projects: 1, blog: 0, contact: 0 },  () => {
       console.log(this.state.about);
       return;
     });
@@ -61,7 +61,7 @@ export default class Main extends Component {
             <div className="m-innerContainer">
               <div style={{ height: 75 }}/>
               <div className="m-firstLine">
-                <div><header className="g-f m-headerFont">Roland Canuto / Full Stack Developer</header></div>
+                <div><header className="g-f m-headerFont">Roland Canuto / Full Stack Engineer</header></div>
                 <div style={{ height: 15 }}/>
               </div>
               <div>
@@ -83,27 +83,8 @@ export default class Main extends Component {
           { this.state.blog === 1 ? <div className="animated fadeIn faster"><Pages.Contact/></div>  : null }
           { this.state.contact === 1 ? <div className="animated fadeIn faster"><Pages.Contact/></div> : null }
         </div>
-        <div>
-          <div className="m-bottom">
-          <div style={{ height: 10 }}/>
-
-            <div>
-              <div className="m-linkContainer">
-                <div className="">
-                  <a className="g-f m-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
-                </div>
-                <div style={{ width: 50 }}/>
-                <div className="t">
-                  <a className="g-f m-linkFont" href="https://github.com/rolandc5">github</a>
-                </div>
-              <div style={{ height: 10 }}/>
-              </div>
-              <div style={{ height: 10 }}/>
-            </div>
-
-          </div>
-        </div>
       </div>
+
     )
  }
 }
@@ -113,4 +94,27 @@ export default class Main extends Component {
 <span className="m-space"/>
 <span><button className="m-menuFont" name="blog" onClick={ this.handleBlogButton }>blog</button></span>
 <span className="m-space"/>
+
+<div className="m-bottom">
+<div style={{ height: 10 }}/>
+
+  <div>
+    <div className="m-linkContainer">
+      <div className="">
+        <a className="g-f m-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
+      </div>
+      <div style={{ width: 50 }}/>
+      <div className="t">
+        <a className="g-f m-linkFont" href="https://github.com/rolandc5">github</a>
+      </div>
+    <div style={{ height: 10 }}/>
+    </div>
+    <div style={{ height: 50 }}/>
+  </div>
+
+</div>
+
+<div>
+
+</div>
 */
