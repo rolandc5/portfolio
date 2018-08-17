@@ -42,7 +42,7 @@ export default class About extends Component {
                        { "As a Software Engineer today, I have earned a passion for coding. If I'm not at home coding, I enjoy hiking, camping, snowboarding, video games, traveling and music. Though once I'm away for a day not coding, I usually have this urge to write code, while constantly thinking of ways to improve my progamming abilities a way to surpass myself."}
                        <br/>
                        <div style={{ height: 10 }}/>
-                       { "With the skills I learned to grasp, my future becomes a blur. Dreams of yesterday became dreams of the past. Not knowing what the future holds for me, heres hoping that it's something bright." }
+                       { "With the skills I learned to grasp, my future becomes clear. Dreams of yesterday became dreams of the past. New dreams now I can grasp." }
                        <br/>
                        <div style={{ height: 10 }}/>
                        { "." }
