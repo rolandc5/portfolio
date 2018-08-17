@@ -15,9 +15,18 @@ export default class About extends Component {
               <div style={{ height: 150 }}/>
 
               <div className="a-headerContainer">
-                <div className="g-f">
+                <div className="a-headerWrapper">
+                  <div className="g-f a-headerFont">
+                    <span> Hi There! </span>
+                  </div>
+                  <div style={{ height: 25 }}/>
+                  <div className="g-f a-headerTFont">
+                    { "I'\m a full stack developer based in Tracy, Califonia. I have a passion for programming and learing new things about technology."}
+                  </div>
                 </div>
               </div>
+
+              <div style={{ height: 150 }}/>
 
               <div className="a-infoInnerContainer">
                 <div className="a-infoInnerWrapper">
@@ -53,7 +62,7 @@ export default class About extends Component {
                 <div className="a-linkContainer">
                 <div className="a-emailContainer">
                   <div className="g-f a-emailHeader">
-                    Actively looking for a position
+                    Hire Me!
                   </div>
                   <div style={{ height: 10 }}/>
 

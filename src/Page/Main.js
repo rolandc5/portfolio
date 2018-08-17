@@ -83,6 +83,19 @@ export default class Main extends Component {
           { this.state.blog === 1 ? <div className="animated fadeIn faster"><Pages.Contact/></div>  : null }
           { this.state.contact === 1 ? <div className="animated fadeIn faster"><Pages.Contact/></div> : null }
         </div>
+        <div className="m-bottom">
+          <div className="m-linkContainer">
+            <div className="">
+
+            </div>
+            <div style={{ width: 50 }}/>
+            <div className="t">
+
+            </div>
+          <div style={{ height: 10 }}/>
+          </div>
+          <div style={{ height: 50 }}/>
+        </div>
       </div>
 
     )

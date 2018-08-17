@@ -207,7 +207,7 @@ Projects.css
 }
 
 .p-projectImage:hover {
-  filter: invert(100%);
+  filter: blur(100%);
 }
 
 .p-changeProjectB {
@@ -223,16 +223,14 @@ Projects.css
   background-color: #f3ffbd;
 }
 
-.p-modal {
-  
+.p-change {
+  border: solid 5px;
+  border-radius: 25px;
 }
 
-
-.p-linkRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
+.p-links {
+  text-decoration: none;
+  color: black
 }
 
 .p-code {
@@ -280,6 +278,21 @@ About.css
 
 .a-headerContainer {
   text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.a-headerFont {
+  font-size: 28px;
+}
+
+.a-headerTFont {
+  font-size: 24px;
+}
+
+.a-headerWrapper {
+  width: 50%;
 }
 
 .a-infoInnerContainer {

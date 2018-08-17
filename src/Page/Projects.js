@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Popup from "reactjs-popup";
 import './Global.css';
 
 
@@ -25,11 +24,9 @@ export default class Projects extends Component {
       this.setState({ number: 0 });
       return;
     }
-    if(name === 'next') {
-      number++
-      this.setState({ number });
-      return;
-    }
+    number++
+    this.setState({ number });
+    return;
   }
 
   openModal = () => {
@@ -80,7 +77,7 @@ export default class Projects extends Component {
                           { this.state.file.map((value, i) => {
                              return (
                                <div>
-                                { this.state.number === i ? <div className="p-hContainer"><button className="p-buttonModal" onClick={ this.openModal }><img className="p-projectImage animated fadeIn" src={ value.picture }/></button></div>: null }
+                                { this.state.number === i ? <div className="p-hContainer"><button className="p-buttonModal" onClick={ this.handleButtonPress }><img className="p-projectImage animated fadeIn" src={ value.picture }/></button></div>: null }
                                </div>
                              )
                           })}
@@ -92,11 +89,16 @@ export default class Projects extends Component {
             </div>
             <div>
               <div className="p-changeProjectB">
-                <button className="g-f p-introSLine" name="next" onClick={ this.handleButtonPress }> Next </button>
+                <a className="g-f p-introSLine p-links" href="https://pass-client.herokuapp.com/"> Link </a>
+                <div style={{ width: 20 }}/>
+                <a className="g-f p-change" name="next" onClick={ this.handleButtonPress }></a>
+                <div style={{ width: 20 }}/>
+                <a className="g-f p-introSLine p-links" href="https://github.com/rolandc5/password-client/tree/modalBranch"> Code </a>
+
               </div>
             <div style={{ height: 100 }}/>
             </div>
-            
+
           </div>
         </div>
       </div>
