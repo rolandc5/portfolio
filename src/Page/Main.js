@@ -19,7 +19,7 @@ export default class Main extends Component {
     }
 
   componentDidMount() {
-    this.setState({ about: 0, projects: 1, blog: 0, contact: 0 },  () => {
+    this.setState({ about: 1, projects: 0, blog: 0, contact: 0 },  () => {
       console.log(this.state.about);
       return;
     });
