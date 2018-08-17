@@ -66,9 +66,7 @@ export default class Main extends Component {
               </div>
               <div>
                 <div className="m-secondLine">
-                <span>{ this.state.projects ===  0 ? <button className="g-f m-menuFont m-D" name="projects" onClick={ this.handleProjectButton }>Work</button> : <button className="g-f m-menuFont m-A" name="projects" onClick={ this.handleProjectButton }>Work</button> }</span>
-                <span className="m-space"/>
-                <span>{ this.state.about === 0 ? <button className="g-f m-menuFont m-D" name="about" onClick={ this.handleAboutButton }>About</button> : <button className="g-f m-menuFont m-A" name="about" onClick={ this.handleAboutButton }>About</button> }</span>
+                <span>{ this.state.about === 0 ? <button className="g-f m-menuFont m-D" name="about" onClick={ this.handleAboutButton }>Stuff</button> : <button className="g-f m-menuFont m-A" name="about" onClick={ this.handleAboutButton }>Stuff</button> }</span>
                 <span className="m-space"/>
                 <span>{ this.state.blog  === 0 ? <button className="g-f m-menuFont m-D" name="blog" onClick={ this.handleBlogButton }>Blog</button> : <button className="g-f m-menuFont m-A" name="blog" onClick={ this.handleBlogButton }>Blog</button> }</span>
                 </div>
@@ -101,7 +99,8 @@ export default class Main extends Component {
     )
  }
 }
-
+/*<span>{ this.state.projects ===  0 ? <button className="g-f m-menuFont m-D" name="projects" onClick={ this.handleProjectButton }>Work</button> : <button className="g-f m-menuFont m-A" name="projects" onClick={ this.handleProjectButton }>Work</button> }</span>
+<span className="m-space"/>*/
 
 /*<span><button className="m-menuFont" name="projects" onClick={ this.handleProjectButton }>work</button></span>
 <span className="m-space"/>

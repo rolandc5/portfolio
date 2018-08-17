@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Projects } from './index.js';
 
 export default class About extends Component {
   constructor() {
@@ -8,147 +9,85 @@ export default class About extends Component {
   }
   render() {
     return (
-      <div className="a-container">
-        <div className="a-wrapper">
-          <div className="a-innerContainer">
-            <div className="a-infoContainer">
-              <div style={{ height: 150 }}/>
+      <div>
+        <div className="a-container">
+          <div className="a-wrapper">
+            <div className="a-innerContainer">
+              <div className="a-infoContainer">
+                <div style={{ height: 200 }}/>
 
-              <div className="a-headerContainer">
-                <div className="a-headerWrapper">
-                  <div className="g-f a-headerFont">
-                    <span> Hi There! </span>
-                  </div>
-                  <div style={{ height: 25 }}/>
-                  <div className="g-f a-headerTFont">
-                    { "I'\m a full stack developer based in Tracy, Califonia. I have a passion for programming and learing new things about technology."}
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ height: 150 }}/>
-
-              <div className="a-infoInnerContainer">
-                <div className="a-infoInnerWrapper">
-                  <div className="a-profileLeft">
-                    <div className="a-profilePictureContainer">
-                      <img className="a-profilePicture" src={ require('./picture.png')}/>
+                <div className="a-infoInnerContainer">
+                  <div className="a-infoInnerWrapper">
+                    <div className="a-profileLeft">
+                      <div className="a-profilePictureContainer">
+                        <img className="a-profilePicture" src={ require('./picture.png')}/>
+                      </div>
+                      <div className="a-profilePictureSpace">
+                      </div>
                     </div>
-                    <div className="a-profilePictureSpace">
-                    </div>
-                  </div>
-                  <div style={{ width: 20 }}/>
-                  <div className="a-profileRight">
-                    <div style={{ height: 25 }}/>
-                    <div className="g-f a-profileHeader">
-                      Something about me
-                    </div>
-                    <div style={{ height: 25 }}/>
-                    <div className="g-f">
-                     { "My name is Roland Canuto and I am a full stack developer living in the Bay Area. While I don't have a degree in Software Engineering. I have learned what it takes to become one at Lambda School, where I completed a 6 month course to teach me what it takes to be Software Engineer." }
-                     <br/>
-                     <div style={{ height: 10 }}/>
-                     { "This website is to showcase my work that I have produced throughout the course of my studies and work to promote myself for future employers. I have always enjoyed being a techi. At a very young age, I loved nothing more than taking apart my toys and learning about how they worked. My passion for technology has thrived as I have grown."}
-                     <br/>
-                     <div style={{ height: 10 }}/>
-                     { "When I am not coding, I enjoy hiking, camping, snowboarding, video games, traveling and music." }
+                    <div style={{ width: 20 }}/>
+                    <div className="a-profileRight">
+                      <div style={{ height: 25 }}/>
+                      <div className="g-f a-profileHeader">
+                        Something about me
+                      </div>
+                      <div style={{ height: 25 }}/>
+                      <div className="g-f">
+                       { "My name is Roland Canuto I was born in the Philippines, but soon moved here when I was 5 years old. I grew up in the Tracy, California a hottest/coldest place in the Central Valley. Growing up I've always liked to take apart my things to see how they work and sometimes successfully putting them back together. From there, I knew I wanted to become an Engineer." }
+                       <br/>
+                       <div style={{ height: 10 }}/>
+                       { "In the past I have always envisioned myself as becoming a Computer Engineer or an Electrical Engineer. While not everything comes to plan, becoming a Software Engineer brings me one step closer to that path." }
+                       <br/>
+                       <div style={{ height: 10 }}/>
+                       { "As a Software Engineer today, I have earned a passion for coding. If I'm not at home coding, I enjoy hiking, camping, snowboarding, video games, traveling and music. Though once I'm away for a day not coding, I usually have this urge to write code, while constantly thinking of ways to improve my progamming abilities a way to surpass myself."}
+                       <br/>
+                       <div style={{ height: 10 }}/>
+                       { "With the skills I learned to grasp, my future becomes a blur. Dreams of yesterday became dreams of the past. Not knowing what the future holds for me, heres hoping that it's something bright." }
+                       <br/>
+                       <div style={{ height: 10 }}/>
+                       { "." }
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <div style={{ height: 200 }}/>
               </div>
-
-
-                <div style={{ height: 100 }}/>
-                <div className="a-linkContainer">
-                <div className="a-emailContainer">
-                  <div className="g-f a-emailHeader">
-                    Hire Me!
-                  </div>
-                  <div style={{ height: 10 }}/>
-
-
-                  <div className="a-socialRow">
-                    <div>
-                      <a className="g-f a-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
-                    </div>
-                    <div style={{ width: 10 }}/>
-                    <div className="">
-                      <a className="g-f a-linkFont" href="mailto:rolandcanuto@outlook.com"> eMail </a>
-                    </div>
-                    <div style={{ width: 10 }}/>
-                    <div className="t">
-                      <a className="g-f a-linkFont" href="https://github.com/rolandc5">github</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ height: 150 }}/>
             </div>
           </div>
         </div>
+
+        <Projects/>
+
       </div>
     );
   }
 }
 
 /*
-<div>
-  <div className="g-f a-headerFont">
-    Hi there!
+<div style={{ height: 100 }}/>
+<div className="a-linkContainer">
+<div className="a-emailContainer">
+  <div className="g-f a-emailHeader">
+    Lets Connect!
   </div>
-  <div className="g-f a-headerTFont">
-    { "I'\m a full stack developer based in Tracy, Califonia. I have a passion for programming and learing new things about technology."}
+  <div style={{ height: 10 }}/>
+
+
+  <div className="a-socialRow">
+    <div>
+      <a className="g-f a-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
+    </div>
+    <div style={{ width: 10 }}/>
+    <div className="">
+      <a className="g-f a-linkFont" href="mailto:rolandcanuto@outlook.com"> eMail </a>
+    </div>
+    <div style={{ width: 10 }}/>
+    <div className="t">
+      <a className="g-f a-linkFont" href="https://github.com/rolandc5">github</a>
+    </div>
   </div>
 </div>
-
-
-            <div>
-              <div className="a-introOuterContainer">
-                <div className="a-introSContainer">
-
-                <div style={{ height: 25 }}/>
-                  <div className="g-f a-bodyFont">
-                    A bit about me
-                  </div>
-
-                  <div style={{ height: 50 }}/>
-                  <div className="a-row">
-                    <div className="g-f a-bodyTFont">
-                      { "Before taking on the task as a Software Developer. I went to school for Computer Engineering, while also doing my Freelance work in Computer Repair." }
-                    </div>
-                    <div style={{ width: 5 }}/>
-                    <div className="a-something">
-                      <div className="a-oProcessor">
-                        <div className="g-f a-iProcessor">
-                          CPU
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                    <div style={{ height: 50 }}/>
-                    <div className="a-row">
-                    <div className="a-something">
-                      <div className="a-oHobby">
-                        <div className="a-iHobby">
-                            Hobbies
-                        </div>
-                      </div>
-                      </div>
-                      <div style={{ width: 5 }}/>
-                      <div className="g-f a-bodyTFont">
-                        { "When I'm not doing any programming, I enjoy hiking, snowboard, camping, video games, the guitar, fixing computers." }
-                      </div>
-                    </div>
-                    <div style={{ height: 25 }}/>
-
-
-
-                </div>
-              </div>
-              <div style={{ height: 125 }}/>
-            </div>
+</div>
 
 */
