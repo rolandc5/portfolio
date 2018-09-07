@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Global.css';
 
+import * as Map from './Map.js';
 
 export default class Projects extends Component {
   constructor() {
@@ -15,7 +16,7 @@ export default class Projects extends Component {
       open: false,
     }
     this.handleButtonPress = this.handleButtonPress.bind(this);
-  }
+  };
 
   handleButtonPress(e) {
     let number = this.state.number;
@@ -27,16 +28,7 @@ export default class Projects extends Component {
     number++
     this.setState({ number });
     return;
-  }
-
-  openModal = () => {
-  this.setState({ open: true });
   };
-
-  closeModal = () => {
-    this.setState({ open: false });
-  };
-
 
   render() {
     return (
@@ -74,13 +66,7 @@ export default class Projects extends Component {
                             <div className="p-button p-colorG"/>
                           </div>
                         </div>
-                          { this.state.file.map((value, i) => {
-                             return (
-                               <div>
-                                { this.state.number === i ? <div className="p-hContainer"><button className="p-buttonModal" onClick={ this.handleButtonPress }><img className="p-projectImage animated fadeIn" src={ value.picture }/></button></div>: null }
-                               </div>
-                             )
-                          })}
+                        <Map.Project projects={ this.state.file } number={ this.state.number } press={ this.handleButtonPress }/>
                       </div>
                   </div>
                 </div>
@@ -88,10 +74,11 @@ export default class Projects extends Component {
               <div style={{ height: 20 }}/>
             </div>
             <div>
+
               <div className="p-changeProjectB">
                 <a className="g-f p-introSLine p-links" href="https://pass-client.herokuapp.com/"> Link </a>
                 <div style={{ width: 20 }}/>
-                <a className="g-f p-change" name="next" onClick={ this.handleButtonPress }></a>
+                <div className="g-f p-change"/>
                 <div style={{ width: 20 }}/>
                 <a className="g-f p-introSLine p-links" href="https://github.com/rolandc5/password-client/tree/modalBranch"> Code </a>
 
@@ -107,52 +94,5 @@ export default class Projects extends Component {
 }
 
 /*
-
-{ this.state.number === 0 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn " src={ this.state.file[0] }/> : null }
-{ this.state.number === 1 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn " src={ this.state.file[0] }/> : null }
-{ this.state.number === 2 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn " src={ this.state.file[0] }/>  : null }
-{ this.state.number === 3 ? <div className="p-hContainer"><img className="p-projectImage animated fadeIn " src={ this.state.file[0] }/>  : null }
-
-  <img className="p-projectImage" src={ require('./image.png')}/>
-  <div>
-    <div className="p-container">
-      <div className="p-wrapper">
-        <div className="p-innerContainer">
-          <div>
-            <div style={{ height: 150 }}/>
-            <div className="g-f p-introFont">
-              <span> Check out some of my work </span>
-            </div>
-            <div style={{ height: 25 }}/>
-            <div className="p-introStyle">
-              <div className="g-f p-introSLine">
-                Front-End
-              </div>
-              <div style={{ width: 25 }}/>
-              <div className="g-f p-introSLine">
-                Back-End/API
-              </div>
-              <div style={{ height: 25 }}/>
-            </div>
-          <div style={{ height: 150 }}/>
-          </div>
-          <div>
-
-            <div className="p-projectContainer">
-              <div className="p-innerProjectContainer">
-
-                      <div>
-                        <img className="p-projectImage" src={ require('./image.png')}/>
-                      </div>
-
-              </div>
-            </div>
-
-          </div>
-        <div style={{ height: 90 }}/>
-        </div>
-      </div>
-    </div>
-  </div>
 
 */
