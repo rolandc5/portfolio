@@ -1,18 +1,46 @@
 import React, { Component } from 'react';
 import { Projects } from './index.js';
 
+const About = (props) => {
+	return (
+			<div className={`a-container ${ props.position[0] === 0 ? '' : props.position[0] === 1 ? 'a-animateEnter' : props.position[0] === 2 ? 'a-animateLeave':  null }`}>
+				<div className="a-wrapper">
+				<div className='wasd'>
+					<div className='g-f a-aboutContainer'>
+						<p className='a-about'>{"Hello, I'm Roland a Software Engineer living in Tracy, California the hottest/coldest place in the Central Valley. As a kid, I've always liked to take apart my toys to see how they work and sometimes successfully... putting them back together. Today, ever since the first output of 'Hello World', I've had a passion for programming. I love to create simple yet eye catching websites and reliable backend databases. "}</p>
+					</div>
+				</div>
+				</div>
+			</div>
+  	)
+}
+
+export default About;
+
+/*
+
 export default class About extends Component {
-  constructor() {
-    super();
-    this.state = {
+    render() {
+        return (
+			<div className="a-container">
+				<div className="a-wrapper">
+					<div className='wasd'>
+						<div className='g-f a-aboutContainer'>
+							<p className='a-about'>{"Hello, I'm Roland a Software Engineer living in Tracy, California the hottest/coldest place in the Central Valley. As a kid, I've always liked to take apart my toys to see how they work and sometimes successfully... putting them back together. Today, ever since the first output of 'Hello World', I've had a passion for programming. I love to create simple yet eye catching websites and reliable backend databases. "}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        );
     }
-  }
-  render() {
-    return (
-      <div>
-        <div className="a-container">
-          <div className="a-wrapper">
-            <div className="a-innerContainer">
+}
+
+
+
+			<div className='a-direction'>
+							<p className='g-f a-scroll'>Scroll</p>
+						</div>
+     <div className="a-innerContainer">
               <div className="a-infoContainer">
                 <div style={{ height: 200 }}/>
 
@@ -64,43 +92,8 @@ export default class About extends Component {
                   </div>
                 </div>
 
-                <div style={{ height: 200 }}/>
+                <div style={{ height: 400 }}/>
               </div>
             </div>
-          </div>
-        </div>
-
-        <Projects/>
-
-      </div>
-    );
-  }
-}
-
-/*
-<div style={{ height: 100 }}/>
-<div className="a-linkContainer">
-<div className="a-emailContainer">
-  <div className="g-f a-emailHeader">
-    Lets Connect!
-  </div>
-  <div style={{ height: 10 }}/>
-
-
-  <div className="a-socialRow">
-    <div>
-      <a className="g-f a-linkFont" href="https://www.linkedin.com/in/roland-canuto-43437941/">linkedIn</a>
-    </div>
-    <div style={{ width: 10 }}/>
-    <div className="">
-      <a className="g-f a-linkFont" href="mailto:rolandcanuto@outlook.com"> eMail </a>
-    </div>
-    <div style={{ width: 10 }}/>
-    <div className="t">
-      <a className="g-f a-linkFont" href="https://github.com/rolandc5">github</a>
-    </div>
-  </div>
-</div>
-</div>
 
 */

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.0",
+    "body-scroll-lock": "^2.5.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-materialize": "^2.4.2",

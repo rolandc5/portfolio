@@ -1,42 +1,131 @@
 import React, { Component } from 'react';
-import './Global.css';
 
-import * as Map from './Map.js';
+const Project = (props) => {
+	return (
+		<div className=	{`p-container ${ props.position[1] === 3 ? '' : props.position[1] === 4 ? 'a-animateEnter' : props.position[1] === 5 ? 'a-animateLeave' : null }`}>
+			<div className="p-wrapper">
+				<div>
+					<div className="g-f p-introFont">
+						<span> Check out some of my work </span>
+					</div>
+					<div className="p-introStyle">
+						<div className="g-f p-introSLine">Front-End</div>
+						<div style={{ width: 25 }}/>
+						<div className="g-f p-introSLine">Back-End/API</div>
+					</div>
+				</div>
+				<div className='p-projectContainer'>
+					<div><a target="_blank" rel="noopener noreferrer" href='http://www.rolandcanuto.me'><img className='p-image' src={ props.file[0].picture }/></a></div>
+					<div><a><img className='p-image' src={ props.file[1].picture }/></a></div>
+					<div><a><img className='p-image' src={ props.file[2].picture }/></a></div>
+					<div><a><img className='p-image' src={ props.file[3].picture }/></a></div>
+					
+				</div>
+			</div>
+		</div>
+  )
+}
+
+export default Project;
+
+
+/*
 
 export default class Projects extends Component {
-  constructor() {
-    super();
-    this.state = {
-      file: [
-        { picture: require('./website2.png')},
-        { picture: require('./website3.png') },
-        { picture: require('./website4.png') },
-      ],
-      number: 0,
-      open: false,
-    }
-    this.handleButtonPress = this.handleButtonPress.bind(this);
-  };
+	constructor() {
+		super();
+		this.state = {
+		file: [
+			{ picture: require('./website2.png') },
+			{ picture: require('./website3.png') },
+			{ picture: require('./website4.png') },
+			{ picture: require('./website5.png') },
+		],
+		}	
+	};
 
-  handleButtonPress(e) {
-    let number = this.state.number;
-    const name = e.target.name;
-    if (this.state.file.length === number + 1) {
-      this.setState({ number: 0 });
-      return;
-    }
-    number++
-    this.setState({ number });
-    return;
-  };
 
   render() {
     return (
+		<div className="p-container">
+			<div className="p-wrapper">
+				<div>
+					<div className="g-f p-introFont">
+						<span> Check out some of my work </span>
+					</div>
+					<div className="p-introStyle">
+						<div className="g-f p-introSLine">Front-End</div>
+						<div style={{ width: 25 }}/>
+						<div className="g-f p-introSLine">Back-End/API</div>
+					</div>
+				</div>
+				<div className='p-projectContainer'>
+					<div><a target="_blank" rel="noopener noreferrer" href='http://www.rolandcanuto.me'><img className='p-image' src={ this.state.file[0].picture }/></a></div>
+					<div><a><img className='p-image' src={ this.state.file[1].picture }/></a></div>
+					<div><a><img className='p-image' src={ this.state.file[2].picture }/></a></div>
+					<div><a><img className='p-image' src={ this.state.file[3].picture }/></a></div>
+					
+				</div>
+			</div>
+		</div>
+    )
+  }
+}
+
+
+	<div className="p-projectContainer">
+					<div>
+						<div className="p-projectWrapper">
+							<div className="p-topBImage">
+								
+							</div>
+							<div>
+								{ this.state.file.map((value, i) => {
+									return (
+									<div>
+										{ this.state.number === i ? <div className="p-hContainer"><div className="p-buttonModal" onClick={ this.handleButtonPress }><img className="p-projectImage animated fadeIn" src={ value.picture }/></div></div>: null }
+									</div>
+									)
+								})}
+							</div>
+						</div>
+					</div>
+				</div>
+
+						{ this.state.modal && (
+					<div className="p-showModal">
+						<div className='p-modal-content' ref={node => { this.node = node; }}>
+							<div className="p-topBImage">
+								<div className='p-modalButtonsContainer'>
+									<div className="p-button p-colorR" onClick={ () => this.handleClick() }/>
+									<div className="p-button p-colorB" onClick={ () => this.handleClick() }/>
+									<div className="p-button p-colorG" onClick={ () => this.handleClick() }/>
+								</div>
+							</div>
+							<div className='p-projectDisplayed'>
+								<img className='p-imageDisplayed' src={ this.state.file[0].picture }/>
+							</div>
+						</div>
+						<div className='p-projectDescriptionContainer'>
+							<div className='p-projectDescriptionWrapper'>
+								<div className='p-projectDescription'>
+									<h1>IBENTA</h1>
+									<div className='p-projectD'>
+										<p>A project that works similarly to Facebook's Marketplace and LetGo</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				)}
+*/
+
+/*
       <div className="p-container">
         <div className="p-wrapper">
           <div className="p-innerContainer">
 
-            <div style={{ height: 150 }}/>
+            <div style={{ height: 100 }}/>
             <div>
               <div className="g-f p-introFont">
                 <span> Check out some of my work </span>
@@ -49,7 +138,7 @@ export default class Projects extends Component {
               </div>
               <div style={{ height: 25 }}/>
             </div>
-            <div style={{ height: 150 }}/>
+            <div style={{ height: 100 }}/>
 
             <div>
               <div className="p-projectContainer">
@@ -89,10 +178,4 @@ export default class Projects extends Component {
           </div>
         </div>
       </div>
-    )
-  }
-}
-
-/*
-
 */

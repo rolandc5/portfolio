@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -9,10 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route path="/" component={ Pages.Main }/>
-        <Route path="/1/about" component={ Pages.About }/>
-        <Route path="/1/project" component={ Pages.Projects }/>
-        <Route path="/1/contact" component={ Pages.Contact }/>
+        <Pages.Nav/>
       </div>
     );
   }

@@ -1,11 +1,11 @@
-import Main from './Main';
+import Nav from './Nav';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Loading from './Loading';
 
 export {
-  Main,
+  Nav,
   About,
   Projects,
   Contact,

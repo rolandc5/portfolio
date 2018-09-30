@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-export default class Contact extends Component {
-  render() {
+const Contact = (props) => {
     return (
-      <div className="c-container">
+      <div className={`c-container ${ props.position[3] === 6 ? '' : null }`}>
         <div className="c-wrapper">
           <div className="c-innerContainer">
 
@@ -27,5 +26,6 @@ export default class Contact extends Component {
         </div>
       </div>
     )
-  }
 }
+
+export default Contact;
