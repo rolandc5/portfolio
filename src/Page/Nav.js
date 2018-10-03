@@ -1,73 +1,75 @@
 import React, { Component } from 'react';
 import './Global.css';
-import { Link } from 'react-router-dom';
 
 import * as Pages from '.';
 
 export default class Nav extends Component {
-	constructor () {
-		super();
-		this.state = {
-      jumped: 0,
-      page: 1,
-      file: [
-        { picture: require('./website2.png') },
-        { picture: require('./website3.png') },
-        { picture: require('./website4.png') },
-        { picture: require('./website5.png') },
-      ],
-		}
-	}
+    constructor (props) {
+        super(props);
+        this.state = {
+            jumped: [0, 3, 6],
+            page: 1,
+            prevprevPage: 0,
+        }
+    }
 
-	handleJump = (page) => {
+    handleJump = (page) => {
     let jumped = 0;
+    let prevPage = this.state.page;
     if (page === 1) {
-      if (this.state.page === 3) {
-        jumped = [1, 5, 4];
-      }
-      else {
-        jumped = [1, 6, 3];
-      }
+        if (prevPage === 3 || (prevPage === 2 && this.state.prevprevPage === 3)) { 
+        jumped = [1, 4, 6];
+        }
+        else {
+        jumped = [1, 3, 6];
+        }
     }
 
     if (page === 2) {
-      if (this.state.page === 3) {
+        if (prevPage === 3) {
         jumped = [2, 4, 6];
-      }
-      else {
+        }
+        else {
         jumped = [2, 3, 6]
-      }
+        }
     }
 
     if (page === 3) {
-      jumped = [2, 5, 6];
+        jumped = [2, 5, 6];
     }
-    console.log(jumped);
-    //about = start 0, enter 1, leave 2
-    //portfolio = start 3, enter 4, leave 5
-    //contact = start 6, enter 7, leave 8
-		this.setState({ page: page, jumped: jumped }, () => {
-		});
-	}
-
-  	render() {
-    	return (
-      <div>
-			<div className='n-container'>
-				<div className='n-wrapper'>
-					<div className='n-topNav'>
-						<div className={ `n-bar ${ this.state.page === 1 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(1) }></div>
-						<div className={ `n-bar ${ this.state.page === 2 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(2) }></div>
-						<div className={ `n-bar ${ this.state.page === 3 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(3) }></div>
-					</div>
-				</div>
-			</div>
-        <Pages.About position={ this.state.jumped }/>
-        <Pages.Projects position={ this.state.jumped } file={ this.state.file }/>
-        <Pages.Contact position={ this.state.jumped }/>
-      </div>
-    	)
- 	}
+    //about = static 0, enter 1, leave 2
+    //portfolio = static 3, enter 4, leave 5
+    //contact = static 6, enter 7, leave 8
+        this.setState({ page: page, jumped: jumped, prevprevPage: prevPage }, () => {
+        });
+    }
+    render() {
+        return (
+            <div className='m-container'>
+                <div className='n-container' >
+                    <div className='n-wrapper'>
+                        <div className='n-sideNav'>
+                        </div>
+                        <div className='n-topNav'>
+                        <div className='g-f n-messageContainer'>Lets Talk</div>
+                            <div className='g-f n-home'>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(1) }>About</div>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(2) }>Portfolio</div>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(3) }>Contact</div>
+                            </div>
+                        </div>
+                        <div className='n-sideNav'>
+                        <div className='n-barNav'>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <Pages.About position={ this.state.jumped }/>
+                <Pages.Projects position={ this.state.jumped } file={ this.state.file }/>
+                <Pages.Contact position={ this.state.jumped }/>
+            </div>
+        )
+    }
 }
 
 
@@ -77,7 +79,28 @@ Figure out when pressed go back to top
 
 on hover show the actual word
 on press grow for the left
+
+                    <div className='n-sideNav'>
+                        <div className={ `n-bar ${ this.state.page === 1 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(1) }></div>
+                        <div className={ `n-bar ${ this.state.page === 2 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(2) }></div>
+                        <div className={ `n-bar ${ this.state.page === 3 ? 'n-barColor' : 'n-oldColor' }` } onClick={ () => this.handleJump(3) }></div>
+                    </div>
+
+                       <div className='n-messageContainer'>
+                                <div onMouseOver={ () => this.handleSocial(true) } onMouseOut={ () => this.handleSocial(false) }>
+                                <div className={`n-messageHover ${ this.state.sClick ? 'n-rotated' : 'n-unRotated' }`}>III</div>
+                                <div className={`n-socialContainer ${ this.state.sClick ? 'n-socialDisplayed' : 'n-socialNotDisplayed'}`} >
+                                    <ul>
+                                        <li className='n-sList'><img className='n-contactImageSize' src={  require('./github.jpg') }/></li>
+                                        <li className='n-sList'><img className='n-contactImageSize' src={  require('./github.jpg') }/></li>
+                                        <li className='n-sList'><img className='n-contactImageSize' src={  require('./github.jpg') }/></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
 */
+
+
 
 
 /*
