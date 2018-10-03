@@ -22,7 +22,7 @@ export default class Project extends Component {
 							file.map((value, index) => {
 								return (
 									<div>
-										{ page === index ? <img className='p-image' src={ value.picture }/> : <div className='p-imageNot'/> }
+										{ page === index ? <img className='p-image' src={ value.picture } alt='wow'/> : <div className='p-imageNot'/> }
 									</div>
 								)
 							})
@@ -44,9 +44,9 @@ export default class Project extends Component {
 	render = () => {
 		const page = this.state.page;
 		const file = this.state.file;
-		const props = this.props;
+		const position = this.props.position[1];
 		return (
-			<div className='p-container' className=	{`p-container ${ props.position[1] === 3 ? '' : props.position[1] === 4 ? 'a-animateEnter' : props.position[1] === 5 ? 'a-animateLeave' : null }`}>
+			<div className={`p-container ${ position === 3 ? '' : position === 4 ? 'a-animateEnter' : position === 5 ? 'a-animateLeave' : null }`}>
 				<div className='p-projectNavContainer'>
 					<div className='p-projectNav'>
 						<div className='p-navigation'>

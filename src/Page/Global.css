@@ -194,19 +194,19 @@ About.css
 }
 
 @keyframes transitionEnter {
-	from { top: -1000px }
+	from { top: -100vh }
 	to { top: 0px }
 }
 
 .a-animateLeave {
 	animation-name: transitionLeave;
 	animation-duration: .8s;
-	top: -1000px;
+	top: -100vh;
 }
 
 @keyframes transitionLeave {
 	from { top: 0px }
-	to { top: -1000px }
+	to { top: -100vh }
 }
 
 .a-wrapper {
@@ -372,7 +372,7 @@ Contact.css
 .c-contactContainer {
 	display: table;
 	height: 100vh;
-	width: 50%;
+	width: 60em;
 }
 
 .c-contact {

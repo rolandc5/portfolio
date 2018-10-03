@@ -65,7 +65,7 @@ export default class Nav extends Component {
                     </div>
                 </div>
                 <Pages.About position={ this.state.jumped }/>
-                <Pages.Projects position={ this.state.jumped } file={ this.state.file }/>
+                <Pages.Projects position={ this.state.jumped }/>
                 <Pages.Contact position={ this.state.jumped }/>
             </div>
         )
