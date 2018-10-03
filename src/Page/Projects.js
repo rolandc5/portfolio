@@ -6,32 +6,39 @@ export default class Project extends Component {
 		this.state = {
 			page: 0,
 			file: [
-                { picture: require('./website2.png') },
-                { picture: require('./website3.png') },
-                { picture: require('./website4.png') },
-                { picture: require('./website5.png') },
+				{ picture: require('./website1.png'), name: 'Showabel - WebApp', description: 'Javascript, React.js, Node.js, Express.js, MongoDB', link: 'https://showabel.herokuapp.com/' },
+				{ picture: require('./website2.png'), name: 'MathUp - WebApp', description: 'Javascript, React.js', link: 'https://mathup.herokuapp.com/' },
+				{ picture: require('./website5.png'), name: 'Ibenta - WebApp', description: 'Javascript, React.js, Node.js, Express.js, MongoDB' },
             ],
 		}
 	}
-	
-	project = (file, color) => {
+
+	project = (file, page) => {
 		return (
-			<div className='p-wrapper' style={{ backgroundColor: color }}>
+			<div className='p-wrapper' style={{ backgroundColor: `${ page % 2 === 0 ? '#042c53' : '#1a3f62' }` }}>
 				<div className='p-projectContainer'>
 					<div className='p-projects'>
-							<img className='p-image' src={ file }/>
-							<div className='p-projectInfo'>
-								<h2 className='g-f p-projectInfoTitleFont'>IBENTA - WebApp</h2>
-								<p className='g-f p-projectInfoFont'>Javascript, React.js, Node.js, Express.js, MongoDB</p>
-							</div>
+						{
+							file.map((value, index) => {
+								return (
+									<div>
+										{ page === index ? <img className='p-image' src={ value.picture }/> : <div className='p-imageNot'/> }
+									</div>
+								)
+							})
+						}
+						<div className='p-projectInfo' style={{ backgroundColor: `${ page % 2 === 0 ? '#1a3f62' : '#042c53' }`}}>
+							<h2 className='g-f p-projectInfoTitleFont'>{file[page].name}</h2>
+							<p className='g-f p-projectInfoFont'>{file[page].description}</p>
+						</div>
 					</div>
 				</div>		
 			</div>
 		)
 	}
 	
-	handleButton = (page) => {
-		this.setState({ page: page });
+	handleButton = (page, color) => {
+		this.setState({ page: page, color: color });
 	}
 
 	render = () => {
@@ -43,17 +50,25 @@ export default class Project extends Component {
 				<div className='p-projectNavContainer'>
 					<div className='p-projectNav'>
 						<div className='p-navigation'>
-							<div className='p-navButton' onClick={ () => this.handleButton(0) }/>
-							<div className='p-navButton' onClick={ () => this.handleButton(1) }/>
-							<div className='p-navButton' onClick={ () => this.handleButton(2) }/>
+							{
+								file.map((value, index) => {
+									return (
+										<a target="_blank" rel="noopener noreferrer" href={ value.link }><div className={`p-navButton ${ page === index ? 'p-active' : '' }`} onMouseMove={ () => this.handleButton(index) }/></a>
+									)
+								})
+							}
+							
 						</div>
 					</div>
 				</div>
-				{ page === 0 ? this.project(file[0].picture, '#042c53') : '' }
-				{ page === 1 ? this.project(file[1].picture, '#1a3f62') : '' }
-				{ page === 2 ? this.project(file[2].picture, '#042c53') : '' }
-				{ page === 3 ? this.project(file[3].picture, '#1a3f62') : '' }
+				{ this.project(file, page) }
 			</div>
 	  )
 	}
 }
+
+/*
+	{ page === 1 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
+							{ page === 2 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
+							{ page === 3 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
+*/

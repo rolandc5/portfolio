@@ -107,8 +107,15 @@ Nav
 
 .n-homeNav {
 	font-size: 18px;
+	transition: .5s ease;
 	font-weight: bold;
 	color: #ffffff;
+	cursor: pointer;
+}
+
+.n-homeNav:hover {
+	font-size: 19px;
+	transition: .5s ease;
 }
 
 .n-messageHover {
@@ -245,6 +252,7 @@ Projects.css
 	height: 100vh;
 	width: 100%;
 	position: fixed;
+	background-color: #042c53;
 	z-index: 2;
 }
 
@@ -267,15 +275,17 @@ Projects.css
 
 .p-navButton {
 	visibility: visible;
-	border: solid 1em white;
+	background-color: white;
+	width: 1.5em;
+	height: 1.5em;
 	transition: 0.3s ease;
 	margin-left: 3em;
 	margin-bottom: 2em;
 }
 
-.p-navButton:hover {
-	transition: 0.3s ease;
-	border: solid 1.5em white;
+.p-active {
+	width: 2em;
+	height: 2em;
 }
 
 .p-wrapper {
@@ -283,6 +293,8 @@ Projects.css
 	justify-content: center;
 	height: 100vh;
 	width: 100%;
+	transition: 1s ease;
+	opacity: 1;
 }
 
 .p-projectContainer {
@@ -294,18 +306,28 @@ Projects.css
 .p-projects {
 	display: table-cell;
 	vertical-align: middle;
-
 }
 
 .p-image {
 	width: 100%;
+	height: 70vh;
 	position: relative;
+	animation-name: image;
+	animation-duration: 1.5s;
+	opacity: 1
 }
 
+@keyframes image {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+.p-imageNot {
+	opacity: 0;
+}
 
 .p-projectInfo {
 	border: none 0.1px;
-	background-color: #1a3f62;
 	position: absolute;
     bottom: 100px;
 	left: 200px;
@@ -373,4 +395,26 @@ Contact.css
 	padding: 0;
 	margin: 0;
 	font-size: 34px;
+}
+
+.c-contactButtonContainer {
+	margin-top: 2em;
+}
+
+.c-contactButton {
+	margin: .5em;
+	padding: .5em;
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	transition: .5s ease;
+}
+
+.c-contactButton:hover {
+	font-size: 26px;
+	transition: .5s ease;
+}
+
+.c-contactButton:visited {
+	text-decoration: none;
 }
