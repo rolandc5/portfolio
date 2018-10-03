@@ -43,9 +43,29 @@ export default class Nav extends Component {
         this.setState({ page: page, jumped: jumped, prevprevPage: prevPage }, () => {
         });
     }
+
+    handleWheel = (e) => {
+        let page = this.state.page;
+        let y = e.deltaY;
+        if (y > 0) {
+            if (this.state.page === 3) {
+                return;
+            }
+            page++;
+            this.handleJump(page);
+        }
+        if (y < 0) {
+            if (this.state.page === 1) {
+                return;
+            }
+            page--;
+            this.handleJump(page);
+        }
+    }
+
     render() {
         return (
-            <div className='m-container'>
+            <div className='m-container' onWheel={ this.handleWheel }>
                 <div className='n-container' >
                     <div className='n-wrapper'>
                         <div className='n-sideNav'>
@@ -53,9 +73,9 @@ export default class Nav extends Component {
                         <div className='n-topNav'>
                         <div className='g-f n-messageContainer'>Lets Talk</div>
                             <div className='g-f n-home'>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(1) }>About</div>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(2) }>Portfolio</div>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ () => this.handleJump(3) }>Contact</div>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onWheel={ (e) => this.handleJump(1) }>About</div>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onWheel={ (e) => this.handleJump(2) }>Portfolio</div>
+                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onWheel={ (e) => this.handleJump(3) }>Contact</div>
                             </div>
                         </div>
                         <div className='n-sideNav'>
