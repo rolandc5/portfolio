@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Global.css';
+import './Mobile.css';
 
-import * as Pages from '.';
+import * as Pages from '..';
 
-export default class Nav extends Component {
+export default class NavM extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -74,30 +74,30 @@ export default class Nav extends Component {
 	}
 
     render() {
+        let page = this.state.page;
         return (
-            <div className='m-container' onWheel={ e => this.handleWheel(e) } onAnimationEnd={ e => this.handleAnimationEnd(e) }>
-                <div className='n-container' >
-                    <div className='n-wrapper'>
-                        <div className='n-sideNav'>
+            <div className='m-m-container' onWheel={ e => this.handleWheel(e) } onAnimationEnd={ e => this.handleAnimationEnd(e) }>
+                <div className='m-n-container' >
+                    <div className='m-n-wrapper'>
+                        <div className='m-n-sideNav'>
                         </div>
-                        <div className='n-topNav'>
-                        <div className='g-f n-messageContainer'>Lets Talk</div>
-                            <div className='g-f n-home'>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(1) }>About</div>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(2) }>Portfolio</div>
-                                <div className='n-homeNav' style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(3) }>Contact</div>
+                        <div className='m-n-topNav'>
+                            <div className='m-n-home'>
+                                <button className={ `g-f m-n-homeNav ${ page === 1 ? 'm-n-homeNavSelected' : ''}` } onClick={ (e) => this.handleJump(1) }>About</button>
+                                <button className={ `g-f m-n-homeNav ${ page === 2 ? 'm-n-homeNavSelected' : ''}` } style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(2) }>Portfolio</button>
+                                <button className={ `g-f m-n-homeNav ${ page === 3 ? 'm-n-homeNavSelected' : ''}` } style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(3) }>Contact</button>
                             </div>
                         </div>
-                        <div className='n-sideNav'>
-                        <div className='n-barNav'>
+                        <div className='m-n-sideNav'>
+                        <div className='m-n-barNav'>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <Pages.About position={ this.state.jumped }/>
-                    <Pages.Projects position={ this.state.jumped }/>
-                    <Pages.Contact position={ this.state.jumped }/>
+                    <Pages.AboutM position={ this.state.jumped }/>
+                    <Pages.ProjectsM position={ this.state.jumped }/>
+                    <Pages.ContactM position={ this.state.jumped }/>
                 </div>
             </div>
         )

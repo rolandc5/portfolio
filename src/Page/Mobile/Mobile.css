@@ -1,0 +1,411 @@
+@media only screen and (max-width: 600px) {
+
+.m-container {
+	margin: 0;
+	padding: 0;
+}
+
+.g-f {
+	font-family: 'Varela Round', sans-serif;
+}
+
+/*
+Nav
+*/
+.m-n-container {
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	z-index: 100;
+	height: 100vh;
+	width: 100%;
+	visibility: hidden;
+}
+
+.m-n-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.m-n-sideNav {
+	width: 10em;
+	visibility: hidden;
+}
+
+.m-n-R {
+	font-size: 100px;
+	float: right;
+	color: #ffffff;
+	visibility: visible;
+}
+
+.m-n-topNav {
+	margin-top: 2em;
+	width: 100%;
+	height: 3.5em;
+	visibility: hidden;
+}
+
+.m-n-oldColor {
+	background-color: black;
+}
+
+.m-n-barColor {
+	background-color: white;
+}
+
+.m-n-barColor:active {
+	background-color: white;
+}
+
+
+.m-n-barNav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+.m-n-bar {
+	display: flex;
+	flex-direction: column;
+	height: 7em;
+	margin: 0;
+	border: none 0.1px;
+	width: 0.5em;
+}
+
+.m-n-messageContainer {
+	float: right;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.m-n-home {
+	display: flex;
+	flex-direction: row;
+	visibility: visible;
+}
+
+.m-n-homeNav {
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	transition: .5s ease;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+	border: none;
+	background-color: inherit;
+}
+
+.m-n-homeNavSelected {
+	opacity: .50;
+}
+
+.m-n-homeNav:hover {
+	font-size: 19px;
+	transition: .5s ease;
+}
+
+.m-n-messageHover {
+	padding: 0;
+	margin: 0;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.m-n-rotated {
+	transform: rotate(90deg);
+	transition: .5s;
+}
+
+.m-n-unRotated {
+	transform: rotate(0deg);
+	transition: .5s
+}
+
+.m-n-socialContainer {
+	display: none;
+}
+
+.m-n-socialDisplayed {
+	display: block;
+}
+
+.m-n-socialNotDisplayed {
+	animation-name: disappear;
+	animation-duration: 0.5s;
+}
+
+@keyframes disappear {
+	from { 
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.m-n-contactImageSize {
+	width: 2.5em;
+	height: 2.5em;
+	margin-bottom: 0.5em;
+}
+
+
+
+/*
+About.css
+70c1b3
+*/
+
+.m-a-container {
+  	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: #001433;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+}
+
+.m-a-animateEnter {
+	animation-name: transitionEnter;
+	animation-duration: .8s;
+	top: 0px;
+}
+
+@keyframes transitionEnter {
+	from { top: -100vh }
+	to { top: 0px }
+}
+
+.m-a-animateLeave {
+	animation-name: transitionLeave;
+	animation-duration: .8s;
+	top: -100vh;
+}
+
+@keyframes transitionLeave {
+	from { top: 0px }
+	to { top: -100vh }
+}
+
+.m-a-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.m-wasd {
+	width: 18em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.m-a-aboutContainer {
+ 	 display: table;
+}
+
+.m-a-about {
+  	display: table-cell;
+	font-size: 19px;
+	line-height: 1.9em;
+	vertical-align: middle;
+	color: #ffffff;
+}
+
+.m-a-direction {
+  	font-weight: bold;
+}
+
+.m-a-scroll {
+  	text-align: center;
+	font-size: 15px;
+}
+
+/*
+Projects.css
+*/
+
+.m-p-container {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	background-color: #042c53;
+	z-index: 2;
+}
+
+.m-p-projectNavContainer {
+	position: absolute;
+	height: 100%;
+	display: table;
+	visibility: hidden;
+	z-index: 3;
+}
+
+.m-p-projectNav {
+	display: table-cell;
+	vertical-align: middle;
+	border: solid;
+}
+
+.m-p-navigation {
+	visibility: hidden;
+}
+
+.m-p-navButton {
+	visibility: visible;
+	background-color: black;
+	width: 1.5em;
+	height: 1.5em;
+	transition: 0.3s ease;
+	margin-left: 1em;
+	margin-bottom: 2em;
+}
+
+.m-p-active {
+	width: 2em;
+	height: 2em;
+}
+
+.m-p-wrapper {
+	display: flex;
+	justify-content: center;
+	height: 20vh;
+	width: 100%;
+	margin-top: 5em;
+	transition: 1s ease;
+	opacity: 1;
+}
+
+.m-p-projectContainer {
+	width: 100%;
+}
+
+.m-p-projects {
+}
+
+.m-p-image {
+	height: 20vh;
+	width: 100%;
+	position: relative;
+	animation-name: image;
+	animation-duration: 1.5s;
+	opacity: 1
+}
+
+@keyframes image {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+.m-p-imageNot {
+	opacity: 0;
+}
+
+.m-p-projectInfo {
+	border: none;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding: 1em;
+}
+
+.m-p-projectInfoTitleFont {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+.m-p-projectInfoFont {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+/*
+Contact.css
+*/
+
+.m-c-container {
+	position: relative;
+	top: 0px;
+	height: 100vh;
+	width: 100%;
+  	margin: 0;
+	padding: 0;
+	background-color: #2e5070;
+	position: fixed;
+	z-index: 1;
+}
+
+.m-c-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.m-c-contactContainer {
+	display: table;
+	height: 100vh;
+	width: 10em;
+}
+
+.m-c-contact {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.m-c-fontColor {
+	color: white;
+}
+
+.m-c-contactInfoContainer {
+	width: 22em;
+	text-align: center;
+}
+
+.m-c-contactHeader {
+	padding: 0;
+	margin: 0;
+	font-size: 52px;
+	line-height: 2em;
+}
+
+.m-c-contactFont {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.5em;
+}
+
+.m-c-contactButtonContainer {
+	margin-top: 2em;
+}
+
+.m-c-contactButton {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: .5em;
+	padding: .5em;
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	transition: .5s ease;
+}
+
+.m-c-contactButton:visited {
+	text-decoration: none;
+}
+
+}

@@ -106,11 +106,19 @@ Nav
 }
 
 .n-homeNav {
+	padding: 0;
+	margin: 0;
 	font-size: 18px;
 	transition: .5s ease;
 	font-weight: bold;
 	color: #ffffff;
 	cursor: pointer;
+	border: none;
+	background-color: inherit;
+}
+
+.n-homeNavSelected {
+	opacity: .50;
 }
 
 .n-homeNav:hover {
@@ -226,10 +234,14 @@ About.css
  	 display: table;
 }
 
-.a-about {
+.a-aboutMiddle {
   	display: table-cell;
-	font-size: 32px;
 	vertical-align: middle;
+}
+
+.a-about {
+	font-size: 32px;
+	line-height: 1.5em;
 	color: #ffffff;
 }
 
