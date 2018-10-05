@@ -108,7 +108,7 @@ Nav
 .n-homeNav {
 	padding: 0;
 	margin: 0;
-	font-size: 18px;
+	font-size: 20px;
 	transition: .5s ease;
 	font-weight: bold;
 	color: #ffffff;
@@ -122,7 +122,7 @@ Nav
 }
 
 .n-homeNav:hover {
-	font-size: 19px;
+	font-size: 21px;
 	transition: .5s ease;
 }
 
@@ -288,16 +288,16 @@ Projects.css
 .p-navButton {
 	visibility: visible;
 	background-color: white;
-	width: 1.5em;
-	height: 1.5em;
+	width: 2em;
+	height: 2em;
 	transition: 0.3s ease;
 	margin-left: 3em;
 	margin-bottom: 2em;
 }
 
 .p-active {
-	width: 2em;
-	height: 2em;
+	width: 2.5em;
+	height: 2.5em;
 }
 
 .p-wrapper {

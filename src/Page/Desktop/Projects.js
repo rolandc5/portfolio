@@ -42,7 +42,7 @@ export default class Project extends Component {
 	}
 
 	render = () => {
-		const page = this.state.page;
+		const page = this.state.page; 
 		const file = this.state.file;
 		const position = this.props.position[1];
 		return (
@@ -53,7 +53,7 @@ export default class Project extends Component {
 							{
 								file.map((value, index) => {
 									return (
-										<a target="_blank" rel="noopener noreferrer" href={ value.link }><div className={`p-navButton ${ page === index ? 'p-active' : '' }`} onMouseMove={ () => this.handleButton(index) }/></a>
+										<div className={`p-navButton ${ page === index ? 'p-active' : '' }`} onMouseMove={ () => this.handleButton(index) }></div>
 									)
 								})
 							}
