@@ -28,6 +28,9 @@ export default class Nav extends Component {
     }
 
     if (page === 2) {
+        if (this.state.page === 2) {
+            return;
+        }
         if (prevPage === 3) {
         jumped = [2, 4, 6];
         }
