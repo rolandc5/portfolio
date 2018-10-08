@@ -351,7 +351,13 @@ Projects.css
 	position: relative;
 	animation-name: image;
 	animation-duration: 1.5s;
+	transition: .2s ease;
 	opacity: 1
+}
+
+.p-image:hover {
+	filter: brightness(85%);
+	transition: .2s ease;
 }
 
 @keyframes image {

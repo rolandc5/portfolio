@@ -22,7 +22,7 @@ export default class Project extends Component {
 							file.map((value, index) => {
 								return (
 									<div>
-										{ page === index ? <img className='p-image' src={ value.picture } alt='wow'/> : <div className='p-imageNot'/> }
+										{ page === index ? <a target="_blank" rel="noopener noreferrer" href={ value.link }><img className='p-image' src={ value.picture } alt='wow'/></a> : <div className='p-imageNot'/> }
 									</div>
 								)
 							})
