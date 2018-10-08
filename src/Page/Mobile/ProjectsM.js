@@ -18,18 +18,11 @@ export default class ProjectM extends Component {
 			<div className='m-p-wrapper' style={{ backgroundColor: `${ page % 2 === 0 ? '#042c53' : '#1a3f62' }` }}>
 				<div className='m-p-projectContainer'>
 					<div className='m-p-projects'>
-						{
-							file.map((value, index) => {
-								return (
-									<div>
-										{ page === index ? <img className='p-image' src={ value.picture } alt='wow'/> : <div className='m-p-imageNot'/> }
-									</div>
-								)
-							})
-						}
+						<img className='p-image' src={ file.picture } alt='wow'/> : <div className='m-p-imageNot'/>
 						<div className='m-p-projectInfo' style={{ backgroundColor: `${ page % 2 === 0 ? '#1a3f62' : '#042c53' }`}}>
-							<h2 className='g-f m-p-projectInfoTitleFont'>{file[page].name}</h2>
-							<p className='g-f m-p-projectInfoFont'>{file[page].description}</p>
+							<h2 className='g-f m-p-projectInfoTitleFont'>{file.name}</h2>
+							<p className='g-f m-p-projectInfoFont'>{file.description}</p>
+							<p className='g-f m-p-projectVisitFont'>Visit Page</p>
 						</div>
 					</div>
 				</div>		
@@ -47,21 +40,9 @@ export default class ProjectM extends Component {
 		const position = this.props.position[1];
 		return (
 			<div className={`m-p-container ${ position === 3 ? '' : position === 4 ? 'm-a-animateEnter' : position === 5 ? 'm-a-animateLeave' : null }`}>
-				<div className='m-p-projectNavContainer'>
-					<div className='m-p-projectNav'>
-						<div className='m-p-navigation'>
-							{
-								file.map((value, index) => {
-									return (
-										<div className={`m-p-navButton ${ page === index ? 'm-p-active' : '' }`} onMouseMove={ () => this.handleButton(index) }/>
-									)
-								})
-							}
-							
-						</div>
-					</div>
-				</div>
-				{ this.project(file, page) }
+				{ this.project(file[0]) }
+				{ this.project(file[1]) }
+				{ this.project(file[2]) }
 			</div>
 	  )
 	}

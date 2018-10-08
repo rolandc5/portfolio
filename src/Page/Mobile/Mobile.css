@@ -28,7 +28,7 @@ Nav
 }
 
 .m-n-sideNav {
-	width: 10em;
+	width: 2.5em;
 	visibility: hidden;
 }
 
@@ -69,7 +69,7 @@ Nav
 .m-n-bar {
 	display: flex;
 	flex-direction: column;
-	height: 7em;
+	height: 5em;
 	margin: 0;
 	border: none 0.1px;
 	width: 0.5em;
@@ -90,22 +90,18 @@ Nav
 .m-n-homeNav {
 	padding: 0;
 	margin: 0;
-	font-size: 18px;
+	font-size: 25px;
 	transition: .5s ease;
 	font-weight: bold;
 	color: #ffffff;
 	cursor: pointer;
 	border: none;
 	background-color: inherit;
+	transform: rotate(90deg);
 }
 
 .m-n-homeNavSelected {
 	opacity: .50;
-}
-
-.m-n-homeNav:hover {
-	font-size: 19px;
-	transition: .5s ease;
 }
 
 .m-n-messageHover {
@@ -167,8 +163,6 @@ About.css
 	height: 100vh;
 	background-color: #001433;
 	width: 100%;
-	position: fixed;
-	z-index: 3;
 }
 
 .m-a-animateEnter {
@@ -199,7 +193,7 @@ About.css
 }
 
 .m-wasd {
-	width: 18em;
+	width: 17em;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -212,8 +206,8 @@ About.css
 
 .m-a-about {
   	display: table-cell;
-	font-size: 19px;
-	line-height: 1.9em;
+	font-size: 18px;
+	line-height: 1.8em;
 	vertical-align: middle;
 	color: #ffffff;
 }
@@ -233,55 +227,12 @@ Projects.css
 
 .m-p-container {
 	margin: 0;
-	padding: 0;
-	height: 100vh;
 	width: 100%;
-	position: fixed;
-	background-color: #042c53;
-	z-index: 2;
-}
-
-.m-p-projectNavContainer {
-	position: absolute;
-	height: 100%;
-	display: table;
-	visibility: hidden;
-	z-index: 3;
-}
-
-.m-p-projectNav {
-	display: table-cell;
-	vertical-align: middle;
-	border: solid;
-}
-
-.m-p-navigation {
-	visibility: hidden;
-}
-
-.m-p-navButton {
-	visibility: visible;
-	background-color: black;
-	width: 1.5em;
-	height: 1.5em;
-	transition: 0.3s ease;
-	margin-left: 1em;
-	margin-bottom: 2em;
-}
-
-.m-p-active {
-	width: 2em;
-	height: 2em;
 }
 
 .m-p-wrapper {
 	display: flex;
 	justify-content: center;
-	height: 20vh;
-	width: 100%;
-	margin-top: 5em;
-	transition: 1s ease;
-	opacity: 1;
 }
 
 .m-p-projectContainer {
@@ -292,9 +243,6 @@ Projects.css
 }
 
 .m-p-image {
-	height: 20vh;
-	width: 100%;
-	position: relative;
 	animation-name: image;
 	animation-duration: 1.5s;
 	opacity: 1
@@ -311,7 +259,6 @@ Projects.css
 
 .m-p-projectInfo {
 	border: none;
-	position: absolute;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -333,20 +280,23 @@ Projects.css
 	color: white;
 }
 
+.m-p-projectVisitFont {
+	padding: 0;
+	margin: 0.5;
+	font-size: 20px;
+	color: white;
+}
 /*
 Contact.css
 */
 
 .m-c-container {
-	position: relative;
 	top: 0px;
 	height: 100vh;
 	width: 100%;
   	margin: 0;
 	padding: 0;
 	background-color: #2e5070;
-	position: fixed;
-	z-index: 1;
 }
 
 .m-c-wrapper {

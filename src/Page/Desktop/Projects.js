@@ -66,9 +66,3 @@ export default class Project extends Component {
 	  )
 	}
 }
-
-/*
-	{ page === 1 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
-							{ page === 2 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
-							{ page === 3 ? <img className='p-image' src={ file[page].picture }/> : <div className='p-imageNot'/> }
-*/

@@ -288,8 +288,8 @@ Projects.css
 .p-navButton {
 	visibility: visible;
 	background-color: white;
-	width: 2em;
-	height: 2em;
+	width: 1.5em;
+	height: 1.5em;
 	transition: 0.3s ease;
 	margin-left: 3em;
 	margin-bottom: 2em;

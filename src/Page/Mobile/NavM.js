@@ -83,9 +83,7 @@ export default class NavM extends Component {
                         </div>
                         <div className='m-n-topNav'>
                             <div className='m-n-home'>
-                                <button className={ `g-f m-n-homeNav ${ page === 1 ? 'm-n-homeNavSelected' : ''}` } onClick={ (e) => this.handleJump(1) }>About</button>
-                                <button className={ `g-f m-n-homeNav ${ page === 2 ? 'm-n-homeNavSelected' : ''}` } style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(2) }>Portfolio</button>
-                                <button className={ `g-f m-n-homeNav ${ page === 3 ? 'm-n-homeNavSelected' : ''}` } style={{ marginLeft: '1em'}} onClick={ (e) => this.handleJump(3) }>Contact</button>
+                               <div className='m-n-homeNav'>III</div>
                             </div>
                         </div>
                         <div className='m-n-sideNav'>
