@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        { window.innerWidth > 600 ? <Pages.Nav/> : <Pages.NavM/> }
+        <Pages.Nav/>
       </div>
     );
   }
