@@ -1,23 +1,3 @@
-/*.container {
-  height: 100vh;
-  margin: 0;
-  position: relative;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  -webkit-box-pack: center;
-     -ms-flex-pack: center;
-   justify-content: center;
-}
-*/
-
 .m-container {
 	margin: 0;
 	padding: 0;
@@ -50,13 +30,6 @@ Nav
 	visibility: hidden;
 }
 
-.n-R {
-	font-size: 100px;
-	float: right;
-	color: #ffffff;
-	visibility: visible;
-}
-
 .n-topNav {
 	margin-top: 3em;
 	width: 100%;
@@ -64,39 +37,10 @@ Nav
 	visibility: hidden;
 }
 
-.n-oldColor {
-	background-color: black;
-}
-
-.n-barColor {
-	background-color: white;
-}
-
-.n-barColor:active {
-	background-color: white;
-}
-
-
 .n-barNav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-
-
-.n-bar {
-	display: flex;
-	flex-direction: column;
-	height: 7em;
-	margin: 0;
-	border: none 0.1px;
-	width: 0.5em;
-}
-
-.n-messageContainer {
-	float: right;
-	font-size: 18px;
-	font-weight: bold;
 }
 
 .n-home {
@@ -126,55 +70,8 @@ Nav
 	transition: .5s ease;
 }
 
-.n-messageHover {
-	padding: 0;
-	margin: 0;
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.n-rotated {
-	transform: rotate(90deg);
-	transition: .5s;
-}
-
-.n-unRotated {
-	transform: rotate(0deg);
-	transition: .5s
-}
-
-.n-socialContainer {
-	display: none;
-}
-
-.n-socialDisplayed {
-	display: block;
-}
-
-.n-socialNotDisplayed {
-	animation-name: disappear;
-	animation-duration: 0.5s;
-}
-
-.n-linkContainer {
-	position: absolute;
-	margin-top: .5em;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-}
-
-.n-projectLink {
-	border: none 1px;
-	color: white;
-	text-decoration: none;
-	padding: .2em;
-	font-size: 20px;
-}
-
-.n-projectLink:hover {
-	font-size: 21px;
+.n-homeNav:focus {
+	outline: none;
 }
 
 @keyframes disappear {
@@ -185,20 +82,6 @@ Nav
 		opacity: 0;
 	}
 }
-
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.n-contactImageSize {
-	width: 2.5em;
-	height: 2.5em;
-	margin-bottom: 0.5em;
-}
-
-
 
 /*
 About.css
@@ -263,15 +146,6 @@ About.css
 	font-size: 32px;
 	line-height: 1.5em;
 	color: #ffffff;
-}
-
-.a-direction {
-  	font-weight: bold;
-}
-
-.a-scroll {
-  	text-align: center;
-	font-size: 15px;
 }
 
 /*
@@ -463,4 +337,28 @@ Contact.css
 
 .c-contactButton:visited {
 	text-decoration: none;
+}
+
+@media all and (orientation:portrait) {
+	/*
+	Nav
+	*/
+	.a-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.wasd {
+		width: 70vw;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+	}
+	
+	.a-about {
+		font-size: 5vw;
+		line-height: 1.8em;
+		color: #ffffff;
+	}	
 }
