@@ -1,0 +1,365 @@
+.m-container {
+	margin: 0;
+	padding: 0;
+}
+
+.g-f {
+	font-family: 'Varela Round', sans-serif;
+}
+
+/*
+Nav
+*/
+.n-container {
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	z-index: 100;
+	height: 100vh;
+	width: 100%;
+	visibility: hidden;
+}
+
+.n-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.n-sideNav {
+	width: 10em;
+	visibility: hidden;
+}
+
+.n-topNav {
+	margin-top: 3em;
+	width: 100%;
+	height: 3.5em;
+	visibility: hidden;
+}
+
+.n-barNav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.n-home {
+	display: flex;
+	flex-direction: row;
+	visibility: visible;
+}
+
+.n-homeNav {
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	transition: .5s ease;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+	border: none;
+	background-color: inherit;
+}
+
+.n-homeNavSelected {
+	opacity: .50;
+}
+
+.n-homeNav:hover {
+	font-size: 19px;
+	transition: .5s ease;
+}
+
+.n-homeNav:focus {
+	outline: none;
+}
+
+@keyframes disappear {
+	from { 
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/*
+About.css
+70c1b3
+*/
+
+.a-container {
+  	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: #001433;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+}
+
+.a-animateEnter {
+	animation-name: transitionEnter;
+	animation-duration: .8s;
+	top: 0px;
+}
+
+@keyframes transitionEnter {
+	from { top: -100vh }
+	to { top: 0px }
+}
+
+.a-animateLeave {
+	animation-name: transitionLeave;
+	animation-duration: .8s;
+	top: -100vh;
+}
+
+@keyframes transitionLeave {
+	from { top: 0px }
+	to { top: -100vh }
+}
+
+.a-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.wasd {
+	width: 60em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.a-aboutContainer {
+ 	 display: table;
+}
+
+.a-aboutMiddle {
+  	display: table-cell;
+	vertical-align: middle;
+}
+
+.a-about {
+	font-size: 32px;
+	line-height: 1.5em;
+	color: #ffffff;
+}
+
+/*
+Projects.css
+*/
+
+.p-container {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	background-color: #042c53;
+	z-index: 2;
+}
+
+.p-projectNavContainer {
+	position: absolute;
+	height: 100%;
+	display: table;
+	visibility: hidden;
+}
+
+.p-projectNav {
+	display: table-cell;
+	vertical-align: middle;
+	border: solid;
+}
+
+.p-navigation {
+	visibility: hidden;
+}
+
+.p-navButton {
+	visibility: visible;
+	background-color: white;
+	transition: 0.3s ease;
+	width: 1.5em;
+	height: 1.5em;
+	margin-left: 3em;
+	margin-bottom: 2em;
+}
+
+.p-linkImage {
+	width: 2em;
+	height: 2em;
+}
+
+.p-active {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.p-wrapper {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	transition: 1s ease;
+	opacity: 1;
+}
+
+.p-projectContainer {
+	display: table;
+	height: 100%;
+	width: 70%;
+}
+
+.p-projects {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.p-image {
+	width: 100%;
+	height: 70vh;
+	position: relative;
+	animation-name: image;
+	animation-duration: 1.5s;
+	transition: .2s ease;
+	opacity: 1
+}
+
+.p-image:hover {
+	filter: brightness(85%);
+	transition: .2s ease;
+}
+
+@keyframes image {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+.p-imageNot {
+	opacity: 0;
+}
+
+.p-projectInfo {
+	border: none 0.1px;
+	position: absolute;
+    bottom: 100px;
+	left: 200px;
+	padding: 2em;
+}
+
+.p-projectInfoTitleFont {
+	font-size: 35px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+.p-projectInfoFont {
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+/*
+Contact.css
+*/
+
+.c-container {
+	position: relative;
+	top: 0px;
+	height: 100vh;
+	width: 100%;
+  	margin: 0;
+	padding: 0;
+	background-color: #2e5070;
+	position: fixed;
+	z-index: 1;
+}
+
+.c-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.c-contactContainer {
+	display: table;
+	height: 100vh;
+	width: 60em;
+}
+
+.c-contact {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.c-fontColor {
+	color: white;
+}
+
+.c-contactHeader {
+	padding: 0;
+	margin: 0;
+	font-size: 120px;
+}
+
+
+.c-contactFont {
+	padding: 0;
+	margin: 0;
+	font-size: 36px;
+}
+
+.c-contactButtonContainer {
+	margin-top: 2em;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.c-contactButton {
+	margin: .5em;
+	padding: .5em;
+	text-decoration: none;
+	color: white;
+	font-size: 26px;
+	transition: .5s ease;
+}
+
+.c-contactButton:hover {
+	font-size: 30px;
+	transition: .5s ease;
+}
+
+.c-contactButton:visited {
+	text-decoration: none;
+}
+
+@media all and (orientation:portrait) {
+	/*
+	Nav
+	*/
+	.a-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.wasd {
+		width: 70vw;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+	}
+	
+	.a-about {
+		font-size: 5vw;
+		line-height: 1.8em;
+		color: #ffffff;
+	}	
+}
