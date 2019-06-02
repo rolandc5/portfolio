@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './About.css';
+
 const About = (props) => {
 	return (
 			<div className={`a-container ${ props.position[0] === 0 ? '' : props.position[0] === 1 ? 'a-animateEnter' : props.position[0] === 2 ? 'a-animateLeave':  null }`}>

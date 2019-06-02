@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import './App.css';
-
 import * as Pages from './Page';
 
 class App extends Component {

@@ -1,0 +1,41 @@
+.m-container {
+  margin: 0;
+  padding: 0;
+}
+
+.g-f {
+  font-family: 'Varela Round', sans-serif;
+}
+
+@keyframes disappear {
+  from { 
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media all and (orientation:portrait) {
+  /*
+  Nav
+  */
+  .a-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wasd {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .a-about {
+    font-size: 5vw;
+    line-height: 1.8em;
+    color: #ffffff;
+  }	
+}

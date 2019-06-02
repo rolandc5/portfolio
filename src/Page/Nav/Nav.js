@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Desktop.css';
+import './Nav.css';
 
 import * as Pages from '..';
 
@@ -16,7 +16,6 @@ export default class Nav extends Component {
 
     handleJump = (page) => {
     let jumped = 0;
-    console.log(page);
     let prevPage = this.state.page;
     if (page === 1) {
         if (prevPage === 3 || (prevPage === 2 && this.state.prevprevPage === 3)) { 

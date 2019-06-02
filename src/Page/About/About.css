@@ -1,0 +1,62 @@
+
+.a-container {
+    margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #001433;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.a-animateEnter {
+  animation-name: transitionEnter;
+  animation-duration: .8s;
+  top: 0px;
+}
+
+@keyframes transitionEnter {
+  from { top: -100vh }
+  to { top: 0px }
+}
+
+.a-animateLeave {
+  animation-name: transitionLeave;
+  animation-duration: .8s;
+  top: -100vh;
+}
+
+@keyframes transitionLeave {
+  from { top: 0px }
+  to { top: -100vh }
+}
+
+.a-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wasd {
+  width: 60em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.a-aboutContainer {
+    display: table;
+    width: 95%;
+}
+
+.a-aboutMiddle {
+    display: table-cell;
+  vertical-align: middle;
+}
+
+.a-about {
+  font-size: 32px;
+  line-height: 1.5em;
+  color: #ffffff;
+}

@@ -1,0 +1,63 @@
+.n-container {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    visibility: hidden;
+  }
+  
+  .n-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .n-sideNav {
+    width: 10em;
+    visibility: hidden;
+  }
+  
+  .n-topNav {
+    margin-top: 3em;
+    width: 100%;
+    height: 3.5em;
+    visibility: hidden;
+  }
+  
+  .n-barNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .n-home {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+  }
+  
+  .n-homeNav {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    transition: .5s ease;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+  }
+  
+  .n-homeNavSelected {
+    opacity: .50;
+  }
+  
+  .n-homeNav:hover {
+    font-size: 19px;
+    transition: .5s ease;
+  }
+  
+  .n-homeNav:focus {
+    outline: none;
+  }

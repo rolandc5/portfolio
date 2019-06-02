@@ -1,0 +1,72 @@
+
+.c-container {
+    position: relative;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+      margin: 0;
+    padding: 0;
+    background-color: #2e5070;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .c-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .c-contactContainer {
+    display: table;
+    height: 100vh;
+    width: 60em;
+  }
+  
+  .c-contact {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .c-fontColor {
+    color: white;
+  }
+  
+  .c-contactHeader {
+    padding: 0;
+    margin: 0;
+    font-size: 120px;
+  }
+  
+  
+  .c-contactFont {
+    padding: 0;
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  .c-contactButtonContainer {
+    margin-top: 2em;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .c-contactButton {
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    transition: .5s ease;
+  }
+  
+  .c-contactButton:hover {
+    font-size: 30px;
+    transition: .5s ease;
+  }
+  
+  .c-contactButton:visited {
+    text-decoration: none;
+  }
+  
