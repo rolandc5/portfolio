@@ -7,7 +7,7 @@ export default class Project extends Component {
 		this.state = {
 			page: 0,
 			file: [
-				{ picture: require('../png/website1.png'), name: 'Showabel - WebApp', description: 'Javascript, React.js, Node.js, Express.js, MongoDB', link: 'https://showabel.herokuapp.com/' },
+				{ picture: require('../../png/website1.png'), name: 'Showabel - WebApp', description: 'Javascript, React.js, Node.js, Express.js, MongoDB', link: 'https://showabel.herokuapp.com/' },
             ],
 		}
 	}
